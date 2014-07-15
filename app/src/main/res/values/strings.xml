@@ -3,8 +3,20 @@
 
     <string name="app_name">EyeSmart_V1</string>
     <string name="title_option_detail">Option Detail</string>
-    <string name="sel_state">Select State</string>
-    <string name="dist_state">Select State</string>
+    <string name="Gender">Gender</string>
+    <string name="sel_state">sel_state</string>
+    <string name="dist_state">dist_state</string>
+   <!-- <string name="dob">dob</string>
+    <string name="email">email</string>
+    <string name="phone">phone</string>
+    <string name="country">country</string>
+    <string name="loc">loc</string>
+    <string name="pincode">pincode</string>
+    <string name="add">add</string>
+    <string name="ref_doc">ref_doc</string>
+    <string name="ref_doc_address">ref_doc_address</string>
+    <string name="sel_state">sel_state</string>
+    <string name="dist_state">dist_state</string> -->
 
     <string-array name="states_list">
         <item>AP</item>

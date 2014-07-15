@@ -4,6 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 
@@ -31,7 +35,7 @@ public class OptionListActivity extends Activity
      * device.
      */
     private boolean mTwoPane;
-
+    RegisterFormFragment register_fragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,7 +75,7 @@ public class OptionListActivity extends Activity
             switch (fItem)
             {
                 case 1:
-                    RegisterFormFragment register_fragment = new RegisterFormFragment();
+                    register_fragment = new RegisterFormFragment();
                     getFragmentManager().beginTransaction()
                             .replace(R.id.option_detail_container, register_fragment)
                             .commit();
@@ -107,6 +111,33 @@ public class OptionListActivity extends Activity
     //Register Patient Handler
     public void registerPatient(View v)
     {
-        Toast.makeText(this,"Patient Registered",Toast.LENGTH_LONG).show();
+
+        Patient pObj = new Patient();
+        EditText editText = (EditText)register_fragment.getView().findViewById(R.id.firstName);
+      RadioGroup radioSexGroup = (RadioGroup) register_fragment.getView().findViewById(R.id.gender);
+
+int selecteditem= radioSexGroup.getCheckedRadioButtonId();
+RadioButton button =(RadioButton) register_fragment.getView().findViewById(selecteditem);
+
+
+        pObj.setfName(((EditText)register_fragment.getView().findViewById(R.id.firstName)).getText().toString());
+        pObj.setfName(((EditText)(EditText)register_fragment.getView().findViewById(R.id.lastname)).getText().toString());
+        pObj.setfName(button.getText().toString());
+        pObj.setfName(((EditText)register_fragment.getView().findViewById(R.id.dob)).getText().toString());
+        pObj.setfName(((EditText)register_fragment.getView().findViewById(R.id.email)).getText().toString());
+        pObj.setfName(((EditText)register_fragment.getView().findViewById(R.id.phone)).getText().toString());
+        pObj.setfName(((EditText)register_fragment.getView().findViewById(R.id.country)).getText().toString());
+        pObj.setfName(((Spinner)register_fragment.getView().findViewById(R.id.state_list)).getSelectedItem().toString());
+        pObj.setfName(((Spinner)register_fragment.getView().findViewById(R.id.state_list)).getSelectedItem().toString());
+
+        pObj.setfName(((EditText)register_fragment.getView().findViewById(R.id.pincode)).getText().toString());
+        pObj.setfName(((EditText)register_fragment.getView().findViewById(R.id.add)).getText().toString());
+        pObj.setfName(((EditText)register_fragment.getView().findViewById(R.id.ref_doc)).getText().toString());
+        pObj.setfName(((EditText)register_fragment.getView().findViewById(R.id.ref_doc_address)).getText().toString());
+
+
+        Toast.makeText(this,editText.getText().toString(),Toast.LENGTH_LONG).show();
     }
+
+
 }

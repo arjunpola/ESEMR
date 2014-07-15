@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="redex.mit.lvpei.eyesmart_v1" >
 
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -22,15 +23,23 @@
         <activity
             android:name=".Login"
             android:label="@string/title_option_detail" >
+        </activity>
+        <activity
+            android:name=".SplashScreen"
+            android:label="@string/title_option_detail" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity
+            android:name=".SelectionFile"
+            android:label="Selection" >
+        </activity>
 
     </application>
-
     <uses-permission android:name="android.permission.INTERNET" />
+
+
 </manifest>

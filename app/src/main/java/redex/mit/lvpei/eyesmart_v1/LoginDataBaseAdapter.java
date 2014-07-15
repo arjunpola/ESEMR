@@ -9,6 +9,34 @@ import android.database.sqlite.SQLiteDatabase;
 /**
  * Created by arjunpola on 15/07/14.
  */
+
+//class Patient
+//{
+//    static final String First_Name = "FIRSTNAME";
+//    static final String Last_Name = "LASTNAME";
+//    static final String Gender = "GENDER";
+//    static final String Age = "AGE";
+//    static final String Date_Of_Birth = "DOB";
+//    static final String Email_ID = "EMAILID";
+//    static final String PhoneNumber = "PHONENUMBER";
+//    static final String Country="COUNTRY";
+//    static final String State="STATE";
+//    static final String District="DISTRICT";
+//
+//    static final String Location="LOCATION";
+//    static final String PinCode="PINCODE";
+//
+//    static final String Address="ADDRESS";
+//
+//    static final String ReferalName="REFERALNAME";
+//
+//    static final String RefAddress="REFERALADDRESS";
+//
+//    static final String VisionTechnician="VISIONTECHNICIAN";
+//
+//}
+
+
 public class LoginDataBaseAdapter {
 
     static final String DATABASE_NAME = "login.db";
@@ -16,6 +44,27 @@ public class LoginDataBaseAdapter {
 
     static final String DATABASE_CREATE = "create table "+"LOGIN"+
             "( " +"EMAIL text primary key,"+ "PIN integer) ";
+
+
+
+    static final String CREATE_PATIENT_TABLES ="create table "+"PATIENT"+
+            "("+Patient.First_Name+" text ,"+
+            Patient.Last_Name+" text ,"+
+            Patient.Gender+" BOOLEAN ,"+
+            Patient.Age+" integer,"+
+            Patient.Date_Of_Birth+" date ,"+
+            Patient.Email_ID+" text ,"+
+            Patient.PhoneNumber+" integer ,"+
+            Patient.Country+" text ,"+
+            Patient.State+" text ,"+
+            Patient.District +" text ,"+
+            Patient.PinCode +" integer ,"+
+            Patient.Address +" text ,"+
+            Patient.ReferalName +" text ,"+
+            Patient.RefAddress +" text ,"+
+            Patient.VisionTechnician +" text ,"+")";
+
+
 
     public SQLiteDatabase db;
     private final Context context;
@@ -62,6 +111,35 @@ public class LoginDataBaseAdapter {
         int numberOFEntriesDeleted= db.delete("LOGIN", where, new String[]{email}) ;
         return numberOFEntriesDeleted;
     }
+
+    public int insertPatientData()
+    {
+
+        return -1;
+    }
+
+//    public  void InsertPatientEntry(Patient p)
+//    {
+//        ContentValues newValues = new ContentValues();
+//        newValues.put(Patient.First_Name, p.getfName());
+//        newValues.put(Patient.Last_Name, p.getlName());
+//        newValues.put(Patient.Date_Of_Birth, p.getfName());
+//        newValues.put(Patient.Email_ID, p.getfName());
+//        newValues.put(Patient.Location, p.getfName());
+//        newValues.put(Patient.PhoneNumber, p.getfName());
+//        newValues.put(Patient.Country, p.getfName());
+//        newValues.put(Patient.State, p.getfName());
+//        newValues.put(Patient.Location, p.getfName());
+//
+//        newValues.put(Patient.State, p.getfName());
+//
+//        newValues.put(Patient.State, p.getfName());
+//
+//
+//
+//        db.insert("LOGIN", null, newValues);
+//
+//    }
 
     public int getSingleEntry(String email)
     {

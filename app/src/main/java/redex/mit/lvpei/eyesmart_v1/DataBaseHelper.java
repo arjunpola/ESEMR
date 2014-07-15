@@ -19,6 +19,7 @@ public class DataBaseHelper extends SQLiteOpenHelper
     public void onCreate(SQLiteDatabase _db)
     {
         _db.execSQL(LoginDataBaseAdapter.DATABASE_CREATE);
+        _db.execSQL(LoginDataBaseAdapter.CREATE_PATIENT_TABLES);
     }
     @Override
     public void onUpgrade(SQLiteDatabase _db, int _oldVersion, int _newVersion)

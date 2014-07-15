@@ -1,6 +1,7 @@
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/patient_fragment"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
@@ -19,7 +20,7 @@
         android:inputType="textPersonName"
         android:hint="First Name"
         android:ems="10"
-        android:id="@+id/editText"
+        android:id="@+id/firstName"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"/>
 
@@ -29,7 +30,7 @@
         android:inputType="textPersonName"
         android:hint="Last Name"
         android:ems="10"
-        android:id="@+id/editText2"
+        android:id="@+id/lastname"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"/>
 
@@ -48,6 +49,7 @@
 
     <RadioGroup
         android:layout_width="wrap_content"
+        android:id="@+id/gender"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_gravity="center_horizontal"
@@ -116,6 +118,7 @@
         android:ems="10"
         android:prompt="@string/sel_state"
         android:spinnerMode="dropdown"
+
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"/>
 
@@ -175,7 +178,7 @@
         android:inputType="textPostalAddress"
         android:hint="Address"
         android:ems="10"
-        android:id="@+id/address"
+        android:id="@+id/ref_doc_address"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"/>
 
