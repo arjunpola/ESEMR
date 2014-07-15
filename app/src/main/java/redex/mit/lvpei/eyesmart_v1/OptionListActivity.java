@@ -3,6 +3,7 @@ package redex.mit.lvpei.eyesmart_v1;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
+import android.view.View;
 import android.widget.Toast;
 
 
@@ -101,5 +102,11 @@ public class OptionListActivity extends Activity
             detailIntent.putExtra(OptionDetailFragment.ARG_ITEM_ID, id);
             startActivity(detailIntent);
         }
+    }
+
+    //Register Patient Handler
+    public void registerPatient(View v)
+    {
+        Toast.makeText(this,"Patient Registered",Toast.LENGTH_LONG).show();
     }
 }

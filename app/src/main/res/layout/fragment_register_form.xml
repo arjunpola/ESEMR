@@ -56,11 +56,13 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/male"
             android:text="Male"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
+            android:id="@+id/female"
             android:text="Female"/>
         </RadioGroup>
     </LinearLayout>
@@ -75,35 +77,6 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"/>
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:hint="Blood Group"
-        android:ems="10"
-        android:id="@+id/blood_group"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"/>
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:hint="Height"
-        android:ems="10"
-        android:id="@+id/height"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"/>
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:hint="Weight"
-        android:ems="10"
-        android:id="@+id/weight"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -129,56 +102,47 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:hint="Mobile"
-        android:ems="10"
-        android:id="@+id/mobile"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"/>
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:hint="Country D"
+        android:text="INDIA"
+        android:editable="false"
         android:ems="10"
         android:id="@+id/country"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"/>
 
-    <EditText
+    <Spinner
+        android:id="@+id/state_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:hint="State D"
         android:ems="10"
-        android:id="@+id/state"
+        android:prompt="@string/sel_state"
+        android:spinnerMode="dropdown"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+
+    <Spinner
+        android:id="@+id/dist_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:prompt="@string/dist_state"
+        android:spinnerMode="dropdown"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:hint="District D"
-        android:ems="10"
-        android:id="@+id/dist"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"/>
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
         android:hint="Location"
         android:ems="10"
         android:id="@+id/loc"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"/>
 
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:hint="Pincode"
         android:ems="10"
         android:id="@+id/pincode"
@@ -188,7 +152,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
+        android:inputType="textPostalAddress"
         android:hint="Address"
         android:ems="10"
         android:id="@+id/add"
@@ -208,12 +172,21 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
+        android:inputType="textPostalAddress"
         android:hint="Address"
         android:ems="10"
         android:id="@+id/address"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Register"
+        android:layout_gravity="center_horizontal"
+        android:onClick="registerPatient"
+        />
 
 </LinearLayout>
     </ScrollView>
