@@ -25,9 +25,9 @@ public class Content {
 
     static {
         // Add 3 sample items.
-        addItem(new Item("1", "Patient Form"));
-        addItem(new Item("2", "Checkin Patients"));
-        addItem(new Item("3", "Checkout Patients"));
+        addItem(new Item("1", "Register"));
+        addItem(new Item("2", "Patient List"));
+        addItem(new Item("3", "Checkout"));
     }
 
     private static void addItem(Item item) {

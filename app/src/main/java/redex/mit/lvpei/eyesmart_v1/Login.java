@@ -106,7 +106,7 @@ public class Login extends Activity {
         @Override
         protected String doInBackground(String... params) {
             HttpClient httpclient = new DefaultHttpClient();
-            String ip = "172.16.79.147:8080";
+            String ip = "192.168.1.175:8080";
             HttpPost httppost = new HttpPost("http://"+ip+"/SmartEMR/tlogin.php");
             try {
                 // Add your data

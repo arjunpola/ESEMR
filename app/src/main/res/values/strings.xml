@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">EyeSmart_V1</string>
+    <string name="app_name">eyeSmartEMR</string>
     <string name="title_option_detail">Option Detail</string>
     <string name="Gender">Gender</string>
     <string name="sel_state">sel_state</string>
     <string name="dist_state">dist_state</string>
-   <!-- <string name="dob">dob</string>
+    <!--
+    <string name="dob">dob</string>
     <string name="email">email</string>
     <string name="phone">phone</string>
     <string name="country">country</string>
@@ -16,19 +17,20 @@
     <string name="ref_doc">ref_doc</string>
     <string name="ref_doc_address">ref_doc_address</string>
     <string name="sel_state">sel_state</string>
-    <string name="dist_state">dist_state</string> -->
+    <string name="dist_state">dist_state</string>
+    -->
 
     <string-array name="states_list">
         <item>AP</item>
         <item>KA</item>
     </string-array>
-
     <string-array name="AP">
         <item>Hyderabad</item>
     </string-array>
-
     <string-array name="KA">
         <item>Bangalore</item>
     </string-array>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

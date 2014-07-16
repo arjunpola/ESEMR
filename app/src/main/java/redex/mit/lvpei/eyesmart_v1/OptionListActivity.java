@@ -3,6 +3,7 @@ package redex.mit.lvpei.eyesmart_v1;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -36,6 +37,7 @@ public class OptionListActivity extends Activity
      */
     private boolean mTwoPane;
     RegisterFormFragment register_fragment;
+    PatientListFragment patient_list_fragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +57,6 @@ public class OptionListActivity extends Activity
                     .setActivateOnItemClick(true);
         }
 
-        // TODO: If exposing deep links into your app, handle intents here.
     }
 
     /**
@@ -81,11 +82,9 @@ public class OptionListActivity extends Activity
                             .commit();
                     break;
                 case 2:
-                    arguments.putString(OptionDetailFragment.ARG_ITEM_ID, id);
-                    OptionDetailFragment fragment = new OptionDetailFragment();
-                    fragment.setArguments(arguments);
+                     patient_list_fragment = new PatientListFragment();
                     getFragmentManager().beginTransaction()
-                            .replace(R.id.option_detail_container, fragment)
+                            .replace(R.id.option_detail_container,patient_list_fragment)
                             .commit();
                     break;
                 case 3:
@@ -135,8 +134,14 @@ RadioButton button =(RadioButton) register_fragment.getView().findViewById(selec
         pObj.setfName(((EditText)register_fragment.getView().findViewById(R.id.ref_doc)).getText().toString());
         pObj.setfName(((EditText)register_fragment.getView().findViewById(R.id.ref_doc_address)).getText().toString());
 
+        LoginDataBaseAdapter adapter = new LoginDataBaseAdapter(getApplicationContext());
+        adapter.open();
+       long entries= adapter.InsertPatientEntry(pObj);
 
-        Toast.makeText(this,editText.getText().toString(),Toast.LENGTH_LONG).show();
+        //String str = adapter.GeneratePatientScript(pObj);
+       // Log.v("Script",str);
+
+        Toast.makeText(this, String.valueOf(entries) ,Toast.LENGTH_LONG).show();
     }
 
 

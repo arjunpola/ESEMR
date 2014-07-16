@@ -1,6 +1,8 @@
 package redex.mit.lvpei.eyesmart_v1;
 
+import android.app.Activity;
 import android.app.Fragment;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -49,6 +51,9 @@ public class RegisterFormFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        Activity a = getActivity();
+        if(a != null) a.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
         states = getResources().getStringArray(R.array.states_list);
         Arrays.sort(states);
 
@@ -56,6 +61,15 @@ public class RegisterFormFragment extends Fragment {
 //        String[] locations = getResources().getStringArray(R.array.locationList);
 //        adapter = new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,locations);
 
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        if(isVisibleToUser) {
+            Activity a = getActivity();
+            if(a != null) a.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        }
     }
 
     @Override

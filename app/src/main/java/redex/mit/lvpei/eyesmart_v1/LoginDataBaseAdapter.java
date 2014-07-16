@@ -6,6 +6,9 @@ import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 
+import java.util.Date;
+import java.util.List;
+
 /**
  * Created by arjunpola on 15/07/14.
  */
@@ -62,7 +65,8 @@ public class LoginDataBaseAdapter {
             Patient.Address +" text ,"+
             Patient.ReferalName +" text ,"+
             Patient.RefAddress +" text ,"+
-            Patient.VisionTechnician +" text ,"+")";
+            Patient.CheckinTime +" text ,"+
+            Patient.VisionTechnician +" text)";
 
 
 
@@ -118,29 +122,66 @@ public class LoginDataBaseAdapter {
         return -1;
     }
 
-//    public  void InsertPatientEntry(Patient p)
-//    {
-//        ContentValues newValues = new ContentValues();
-//        newValues.put(Patient.First_Name, p.getfName());
-//        newValues.put(Patient.Last_Name, p.getlName());
-//        newValues.put(Patient.Date_Of_Birth, p.getfName());
-//        newValues.put(Patient.Email_ID, p.getfName());
-//        newValues.put(Patient.Location, p.getfName());
-//        newValues.put(Patient.PhoneNumber, p.getfName());
-//        newValues.put(Patient.Country, p.getfName());
-//        newValues.put(Patient.State, p.getfName());
-//        newValues.put(Patient.Location, p.getfName());
+    public  long InsertPatientEntry(Patient p)
+    {
+        ContentValues newValues = new ContentValues();
+        newValues.put(Patient.First_Name, p.getfName());
+        newValues.put(Patient.Last_Name, p.getlName());
+        newValues.put(Patient.Date_Of_Birth, p.getfName());
+        newValues.put(Patient.VisionTechnician, p.getVisionTech());
+        newValues.put(Patient.CheckinTime, p.getCheckinTime());
+      return   db.insert("PATIENT", null, newValues);
+
+
+    }
+    public  String GeneratePatientScript(Patient p) {
+
+
+
+        String Query = " insert into tbl_patient ( tp_title , tp_first_name , tp_last_name ,tp_next_of_kin ,tp_next_of_kin_name ,tp_gender," +
+                "tp_dob , tp_email , tp_phone , tp_cell_number , tp_address ,  tp_image , tp_category  ," +
+                "tp_country , tp_state , tp_district , tp_location , tp_pin_code,tp_mandal ,tp_created_time ,)values" +
+                "(1,'" + p.getfName() + "','" +
+                p.getlName() + "'," +
+                1 + "," +
+                "'asdf'" + "," +
+               "M" + ",'" +
+                p.getDob() + "'," +
+                p.getPhone() + "," +
+                "12" + ",'" +
+                p.getAddress() + "'," +
+                "'sadf'" + "," +
+                1 + ",'" +
+                p.getCountry() + "','" +
+
+                p.getEmail_ID() + "'," +
+                p.getPhone() + "," +
+                "0000," + "'" + p.getAddress() + "'," +
+                "abcd,abcd," + 101 + "," + 1 + ",'" + p.getLocation() + "','" + p.getPin() + "'," + 123 + ",'13-07-2014 10:10:10'";
 //
-//        newValues.put(Patient.State, p.getfName());
+        return Query;
+
+//        insert into tbl_patient ( tp_title , tp_first_name , tp_last_name ,tp_next_of_kin ,tp_next_of_kin_name ,tp_gender,tp_dob , tp_email , tp_phone , tp_cell_number , tp_address ,  tp_image , tp_category  ,tp_country , tp_state , tp_district , tp_location , tp_pin_code,tp_mandal ,tp_created_time)
+//        values('mr','','n',1,'asdf','M','1992-06-10','adfasd','12','1','sadf','image',1,101,1,4,null,'123',1,'9999-12-31 23:59:59');
+
+
+    }
+
+
+
 //
-//        newValues.put(Patient.State, p.getfName());
-//
-//
-//
-//        db.insert("LOGIN", null, newValues);
 //
 //    }
 
+
+
+//    public List<Patient> GetAllPatient()
+//    {
+//
+//
+//
+//
+//    }
     public int getSingleEntry(String email)
     {
         Cursor cursor=db.query("LOGIN", null, " EMAIL=?", new String[]{email}, null, null, null);
