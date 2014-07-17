@@ -1,0 +1,233 @@
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/patient_fragment"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#CCEAFA">
+
+    <LinearLayout
+        android:orientation="vertical"
+        style="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:textIsSelectable="true"
+        tools:context=".RegisterFormFragment">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/action_bar"/>
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="First Name"
+            android:ems="10"
+            android:id="@+id/firstName"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Last Name"
+            android:ems="10"
+            android:id="@+id/lastname"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="62dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.2"
+                android:textSize="18dp"
+                android:text="Gender"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:id="@+id/gender"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="0.8"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/male"
+                    android:textSize="18dp"
+                    android:text="Male"/>
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/female"
+                    android:textSize="18dp"
+                    android:text="Female"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Date of Birth"
+            android:ems="10"
+            android:id="@+id/dob"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"/>
+
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Email"
+            android:ems="10"
+            android:id="@+id/email"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"/>
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Phone"
+            android:ems="10"
+            android:id="@+id/phone"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"/>
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="INDIA"
+            android:editable="false"
+            android:ems="10"
+            android:id="@+id/country"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"/>
+
+        <Spinner
+            android:id="@+id/state_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:prompt="@string/sel_state"
+            android:spinnerMode="dropdown"
+
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"/>
+
+        <Spinner
+            android:id="@+id/dist_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:prompt="@string/dist_state"
+            android:spinnerMode="dropdown"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"/>
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Location"
+            android:ems="10"
+            android:id="@+id/loc"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"/>
+
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Pincode"
+            android:ems="10"
+            android:id="@+id/pincode"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"/>
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPostalAddress"
+            android:hint="Address"
+            android:ems="10"
+            android:id="@+id/add"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"/>
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:hint="Referral Doctor Name"
+            android:ems="10"
+            android:id="@+id/ref_doc"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"/>
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPostalAddress"
+            android:hint="Referral Doctor Address"
+            android:ems="10"
+            android:id="@+id/ref_doc_address"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"/>
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPostalAddress"
+            android:hint="Vision Techinician"
+            android:ems="10"
+            android:id="@+id/vision_tech"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"/>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Register"
+            android:layout_gravity="center_horizontal"
+            android:onClick="registerPatient"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:background="#DBF4FA"
+            />
+
+    </LinearLayout>
+</ScrollView>

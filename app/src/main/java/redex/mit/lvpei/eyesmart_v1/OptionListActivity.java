@@ -1,5 +1,6 @@
 package redex.mit.lvpei.eyesmart_v1;
 
+import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
@@ -52,6 +53,10 @@ public class OptionListActivity extends Activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        ActionBar ab = getActionBar();
+        ab.hide();
+
         setContentView(R.layout.activity_option_list);
        adapter = new LoginDataBaseAdapter(getApplicationContext());
         adapter.open();
@@ -125,37 +130,37 @@ public class OptionListActivity extends Activity
     public void registerPatient(View v)
     {
 
-      Patient pObj = new Patient();
-//      EditText editText = (EditText)register_fragment.getView().findViewById(R.id.firstName);
-//      RadioGroup radioSexGroup = (RadioGroup) register_fragment.getView().findViewById(R.id.gender);
+//      Patient pObj = new Patient();
+////      EditText editText = (EditText)register_fragment.getView().findViewById(R.id.firstName);
+////      RadioGroup radioSexGroup = (RadioGroup) register_fragment.getView().findViewById(R.id.gender);
+////
+////    int selecteditem = radioSexGroup.getCheckedRadioButtonId();
+////    RadioButton button =(RadioButton) register_fragment.getView().findViewById(selecteditem);
 //
-//    int selecteditem = radioSexGroup.getCheckedRadioButtonId();
-//    RadioButton button =(RadioButton) register_fragment.getView().findViewById(selecteditem);
-
-
-        pObj.setfName(((EditText)register_fragment.getView().findViewById(R.id.firstName)).getText().toString());
-        pObj.setlName(((EditText) register_fragment.getView().findViewById(R.id.lastname)).getText().toString());
-
-       pObj.setDob(((EditText) register_fragment.getView().findViewById(R.id.dob)).getText().toString());
-      pObj.setEmail(((EditText) register_fragment.getView().findViewById(R.id.email)).getText().toString());
-       pObj.setPhone(((EditText) register_fragment.getView().findViewById(R.id.phone)).getText().toString());
-       pObj.setCountry(((EditText) register_fragment.getView().findViewById(R.id.country)).getText().toString());
-       pObj.setState(((Spinner) register_fragment.getView().findViewById(R.id.state_list)).getSelectedItem().toString());
-        pObj.setDist(((Spinner) register_fragment.getView().findViewById(R.id.dist_list)).getSelectedItem().toString());
-
-       pObj.setPin(((EditText)register_fragment.getView().findViewById(R.id.pincode)).getText().toString());
-       pObj.setAddress(((EditText) register_fragment.getView().findViewById(R.id.add)).getText().toString());
-       pObj.setReferal(((EditText) register_fragment.getView().findViewById(R.id.ref_doc)).getText().toString());
-        pObj.setRefAddress(((EditText) register_fragment.getView().findViewById(R.id.ref_doc_address)).getText().toString());
-        pObj.setVisionTech(((EditText) register_fragment.getView().findViewById(R.id.vision_tech)).getText().toString());
-       //pObj.setGender("MALE");
-
-//        DateFormat format = new SimpleDateFormat("DD-MM-YY HH:MM:SS");
-//        String st = format.format(new Date(0));
-
-        pObj.setCheckinTime("01-10-2014 10:10:10");
-
-       long entries= adapter.InsertPatientEntry(pObj);
+//
+//        pObj.setfName(((EditText)register_fragment.getView().findViewById(R.id.firstName)).getText().toString());
+//        pObj.setlName(((EditText) register_fragment.getView().findViewById(R.id.lastname)).getText().toString());
+//
+//       pObj.setDob(((EditText) register_fragment.getView().findViewById(R.id.dob)).getText().toString());
+//      pObj.setEmail(((EditText) register_fragment.getView().findViewById(R.id.email)).getText().toString());
+//       pObj.setPhone(((EditText) register_fragment.getView().findViewById(R.id.phone)).getText().toString());
+//       pObj.setCountry(((EditText) register_fragment.getView().findViewById(R.id.country)).getText().toString());
+//       pObj.setState(((Spinner) register_fragment.getView().findViewById(R.id.state_list)).getSelectedItem().toString());
+//        pObj.setDist(((Spinner) register_fragment.getView().findViewById(R.id.dist_list)).getSelectedItem().toString());
+//
+//       pObj.setPin(((EditText)register_fragment.getView().findViewById(R.id.pincode)).getText().toString());
+//       pObj.setAddress(((EditText) register_fragment.getView().findViewById(R.id.add)).getText().toString());
+//       pObj.setReferal(((EditText) register_fragment.getView().findViewById(R.id.ref_doc)).getText().toString());
+//        pObj.setRefAddress(((EditText) register_fragment.getView().findViewById(R.id.ref_doc_address)).getText().toString());
+//        pObj.setVisionTech(((EditText) register_fragment.getView().findViewById(R.id.vision_tech)).getText().toString());
+//       //pObj.setGender("MALE");
+//
+////        DateFormat format = new SimpleDateFormat("DD-MM-YY HH:MM:SS");
+////        String st = format.format(new Date(0));
+//
+//        pObj.setCheckinTime("01-10-2014 10:10:10");
+//
+//       long entries= adapter.InsertPatientEntry(pObj);
 
 
        //Toast.makeText(this,"Time "+ st ,Toast.LENGTH_LONG).show();

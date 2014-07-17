@@ -78,7 +78,7 @@ public class Login extends Activity {
             else
             {
                 //Toast.makeText(this,"LSUCCESS",Toast.LENGTH_LONG).show();
-                Intent i = new Intent(this,OptionListActivity.class);
+                Intent i = new Intent(this,Home.class);
                 startActivity(i);
                 finish();
             }
@@ -111,7 +111,7 @@ public class Login extends Activity {
         @Override
         protected String doInBackground(String... params) {
             HttpClient httpclient = new DefaultHttpClient();
-            String ip = "172.16.79.147:8080";
+            String ip = "172.16.79.165:8080";
             HttpPost httppost = new HttpPost("http://"+ip+"/SmartEMR/tlogin.php");
             try {
                 // Add your data
@@ -157,7 +157,7 @@ public class Login extends Activity {
             if(result.equals("SUCCESS")) {
                 loginDataBaseAdapter.insertEntry(email,pin);
                 //Toast.makeText(getBaseContext(), "RSUCCESS", Toast.LENGTH_LONG).show();
-                Intent i = new Intent(Login.this,OptionListActivity.class);
+                Intent i = new Intent(Login.this,Home.class);
                 startActivity(i);
                 finish();
             }

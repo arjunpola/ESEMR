@@ -10,7 +10,9 @@
         android:layout_height="wrap_content"
         android:src="@drawable/vision_btn"
         android:id="@+id/vision_Center"
-        android:layout_marginTop="100dp"/>
+        android:background="@null"
+        android:layout_marginTop="115dp"
+        android:visibility="visible"/>
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -18,5 +20,9 @@
         android:id="@+id/corporate"
         android:src="@drawable/corporate_btn"
         android:layout_below="@id/vision_Center"
-        android:layout_alignStart="@+id/vision_Center" />
+        android:background="@null"
+        android:layout_alignStart="@+id/vision_Center"
+        android:layout_marginTop="10dp"
+        android:visibility="visible"/>
+
 </RelativeLayout>

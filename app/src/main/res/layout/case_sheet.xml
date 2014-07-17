@@ -5,7 +5,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="1200dp"
+        android:layout_height="fill_parent"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin">
@@ -25,22 +25,22 @@
             android:layout_height="wrap_content"
             android:spinnerMode="dropdown"
             android:entries="@array/country_arrays"
+            android:clickable="false"
+            android:layout_marginTop="27dp"
             android:layout_alignTop="@+id/timePicker"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignRight="@+id/checkBox4"
-            android:layout_alignEnd="@+id/checkBox4" />
+            android:layout_alignParentStart="true" />
         <Spinner
             android:id="@+id/spinner2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:spinnerMode="dropdown"
-            android:layout_below="@+id/textView2"
+            android:entries="@array/country_arrays"
+            android:clickable="false"
+            android:layout_alignTop="@+id/spinner1"
             android:layout_alignLeft="@+id/textView2"
             android:layout_alignStart="@+id/textView2"
-            android:entries="@array/country_arrays"
-            android:layout_alignRight="@+id/checkBox2"
-            android:layout_alignEnd="@+id/checkBox2" />
+            android:layout_toLeftOf="@+id/textView11" />
 
 
         <TextView
@@ -128,7 +128,9 @@
             android:spinnerMode="dropdown"
             android:entries="@array/country_arrays"
             android:layout_below="@+id/textView4"
-            android:layout_toLeftOf="@+id/textView3" />
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="28dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -350,7 +352,148 @@
             android:layout_alignRight="@+id/editText8"
             android:layout_alignEnd="@+id/editText8" />
 
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current Treatment"
+            android:id="@+id/checkBox7"
+            android:layout_below="@+id/editText9"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="36dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/editText10"
+            android:layout_below="@+id/checkBox7"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personal History"
+            android:id="@+id/checkBox8"
+            android:layout_marginTop="38dp"
+            android:layout_below="@+id/editText10"
+            android:layout_alignRight="@+id/checkBox5"
+            android:layout_alignEnd="@+id/checkBox5" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/editText11"
+            android:layout_alignLeft="@+id/checkBox8"
+            android:layout_alignStart="@+id/checkBox8"
+            android:layout_below="@+id/checkBox8"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nutritional Status"
+            android:id="@+id/checkBox9"
+            android:checked="false"
+            android:layout_marginTop="38dp"
+            android:layout_below="@+id/editText11"
+            android:layout_alignRight="@+id/checkBox7"
+            android:layout_alignEnd="@+id/checkBox7" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Malnourished"
+            android:id="@+id/radioButton"
+            android:layout_below="@+id/checkBox9"
+            android:layout_alignRight="@+id/checkBox7"
+            android:layout_alignEnd="@+id/checkBox7"
+            android:checked="false" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Normal"
+            android:id="@+id/radioButton2"
+            android:checked="false"
+            android:layout_below="@+id/checkBox9"
+            android:layout_alignRight="@+id/textView11"
+            android:layout_alignEnd="@+id/textView11" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Obese"
+            android:id="@+id/radioButton3"
+            android:checked="false"
+            android:layout_alignTop="@+id/radioButton2"
+            android:layout_toRightOf="@+id/spinner4" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="General Examination"
+            android:id="@+id/checkBox10"
+            android:layout_marginTop="39dp"
+            android:checked="false"
+            android:layout_below="@+id/radioButton"
+            android:layout_alignLeft="@+id/checkBox9"
+            android:layout_alignStart="@+id/checkBox9" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/editText12"
+            android:layout_below="@+id/checkBox10"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Systematic Examination"
+            android:id="@+id/checkBox11"
+            android:layout_below="@+id/editText12"
+            android:layout_alignLeft="@+id/editText11"
+            android:layout_alignStart="@+id/editText11"
+            android:layout_marginTop="38dp"
+            android:checked="false" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/editText13"
+            android:layout_below="@+id/checkBox11"
+            android:layout_marginTop="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Spinner
+            android:id="@+id/spinner6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown"
+            android:entries="@array/country_arrays"
+            android:layout_above="@+id/editText4"
+            android:layout_alignLeft="@+id/textView8"
+            android:layout_alignStart="@+id/textView8"
+            android:layout_toLeftOf="@+id/textView11" />
+
     </RelativeLayout>
 
 </ScrollView>
-

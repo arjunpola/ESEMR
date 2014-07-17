@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/patient_fragment"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    android:layout_height="fill_parent"
+    android:background="#FFCCEAFA">
 
 <LinearLayout
     android:orientation="vertical"
@@ -118,7 +119,6 @@
         android:ems="10"
         android:prompt="@string/sel_state"
         android:spinnerMode="dropdown"
-
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"/>
 
@@ -192,8 +192,11 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"/>
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:background="#DBF4FA"
         android:layout_marginTop="20dp"
         android:text="Register"
         android:layout_gravity="center_horizontal"

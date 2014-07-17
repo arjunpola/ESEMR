@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_bg">
+
+    <ImageButton
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/register_patient"
+        android:id="@+id/vision_Center"
+        android:layout_marginTop="120dp"
+        android:visibility="visible"
+        android:onClick="register"/>
+
+    <ImageButton
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/corporate"
+        android:src="@drawable/view_patients"
+        android:layout_below="@id/vision_Center"
+        android:background="@null"
+        android:layout_alignStart="@+id/vision_Center"
+        android:layout_marginTop="10dp"
+        android:visibility="visible"/>
+
+</RelativeLayout>
