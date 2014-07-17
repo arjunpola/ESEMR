@@ -7,6 +7,17 @@
     android:background="@drawable/home_bg">
 
     <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/sync"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="30dp"
+        android:background="@null"/>
+
+    <ImageButton
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/register_patient"
@@ -23,7 +34,7 @@
         android:layout_below="@id/vision_Center"
         android:background="@null"
         android:layout_alignStart="@+id/vision_Center"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="0dp"
         android:visibility="visible"/>
 
 </RelativeLayout>

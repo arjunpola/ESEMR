@@ -2,64 +2,57 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="redex.mit.lvpei.eyesmart_v1" >
 
-
     <application
         android:allowBackup="true"
         android:icon="@drawable/app_logo"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".OptionListActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait">
-
-        </activity>
-        <activity
             android:name=".Login"
             android:label="@string/title_option_detail"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".SplashScreen"
             android:label="eyeSmart"
-            android:screenOrientation="portrait">
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".SelectionFile"
             android:label="eyeSmart"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".CaseSheet"
             android:label="eyeSmart"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".Register"
             android:label="eyeSmart"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".Home"
             android:label="eyeSmart"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".ViewPatients"
             android:label="eyeSmart"
-            android:screenOrientation="portrait">
-
+            android:screenOrientation="portrait" >
         </activity>
-
+        <activity
+            android:name=".DetailForms"
+            android:label="@string/title_activity_detail_forms" >
+        </activity>
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

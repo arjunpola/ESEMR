@@ -44,4 +44,11 @@
         <item>India</item>
     </string-array>
 
+    <string name="title_activity_detail_forms">Forms</string>
+    <string name="title_section1">Case Sheet</string>
+    <string name="title_section2">Refraction</string>
+    <string name="title_section3">Ocular Examination</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
 </resources>

@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cengalabs.flatui.FlatUI;
@@ -163,6 +164,7 @@ public class Login extends Activity {
             }
 
             if (result.equals("FAIL"))
+
                 Toast.makeText(getBaseContext(),"FAIL",Toast.LENGTH_LONG).show();
         }
     }

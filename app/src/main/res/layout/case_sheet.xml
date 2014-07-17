@@ -435,7 +435,6 @@
             android:checked="false"
             android:layout_alignTop="@+id/radioButton2"
             android:layout_toRightOf="@+id/spinner4" />
-
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
