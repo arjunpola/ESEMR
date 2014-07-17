@@ -1,5 +1,6 @@
 package redex.mit.lvpei.eyesmart_v1;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -40,12 +41,16 @@ public class Login extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        ActionBar actionBar = getActionBar();
+        actionBar.hide();
+
         super.onCreate(savedInstanceState);
 
-        FlatUI.initDefaultValues(this);
-        FlatUI.setDefaultTheme(FlatUI.DEEP);
-        FlatUI.setDefaultTheme(R.array.deep);    // for using custom theme as default
-        getActionBar().setBackgroundDrawable(FlatUI.getActionBarDrawable(this,FlatUI.DEEP,false));
+//        FlatUI.initDefaultValues(this);
+//        FlatUI.setDefaultTheme(FlatUI.DEEP);
+//        FlatUI.setDefaultTheme(R.array.deep);    // for using custom theme as default
+//        getActionBar().setBackgroundDrawable(FlatUI.getActionBarDrawable(this,FlatUI.DEEP,false));
 
         setContentView(R.layout.login);
         emailBox = (EditText)findViewById(R.id.emailBox);
@@ -106,7 +111,7 @@ public class Login extends Activity {
         @Override
         protected String doInBackground(String... params) {
             HttpClient httpclient = new DefaultHttpClient();
-            String ip = "192.168.1.175:8080";
+            String ip = "172.16.79.147:8080";
             HttpPost httppost = new HttpPost("http://"+ip+"/SmartEMR/tlogin.php");
             try {
                 // Add your data

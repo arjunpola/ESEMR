@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+<RelativeLayout
+    xmlns:flatui="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#CCEAFA">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/action_bar"
+        android:layout_marginTop="2dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TableRow
         android:layout_width="fill_parent"
@@ -9,20 +22,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="48dp"
-        android:id="@+id/email_row">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Email"
-            android:layout_marginLeft="30dp"/>
-        <EditText
-            android:layout_width="fill_parent"
-            android:id="@+id/emailBox"
-            android:layout_height="40dp"
-            android:layout_marginLeft="40dp"
-            android:inputType="text"
-            android:hint="Enter Email"/>
-    </TableRow>
+        android:id="@+id/email_row"></TableRow>
 
     <TableRow
         android:layout_width="fill_parent"
@@ -30,27 +30,51 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/email_row"
         android:id="@+id/pin_row"
-        android:layout_marginTop="40dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="PIN"
-            android:layout_marginLeft="40dp"/>
-        <EditText
-            android:layout_width="fill_parent"
-            android:id="@+id/pinBox"
-            android:layout_height="40dp"
-            android:layout_marginLeft="40dp"
-            android:hint="Enter Pin"
-            android:inputType="numberPassword"/>
-    </TableRow>
+        android:layout_marginTop="40dp"></TableRow>
+
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:id="@+id/emailBox"
+        android:layout_height="50dp"
+        android:inputType="text"
+        android:hint="USERNAME"
+        android:textSize="20dp"
+        android:textColor="#4CB4DB"
+        android:layout_marginTop="125dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_below="@+id/pin_row"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:id="@+id/pinBox"
+        android:layout_height="50dp"
+        android:hint="PIN"
+        android:inputType="numberPassword"
+        android:textSize="20dp"
+        android:textColor="#4CB4DB"
+        android:layout_below="@+id/emailBox"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp" />
+
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/pin_row"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
+        android:background="#DBF4FA"
         android:onClick="auth"
-        android:text="Submit"/>
+        android:textSize="20dp"
+        android:textColor="#4CB4DB"
+        android:text="Submit"
+        android:id="@+id/submit"
+        android:layout_marginTop="105dp"
+        android:layout_below="@+id/pinBox"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="120dp"
+        android:layout_marginRight="120dp"/>
+
+
 </RelativeLayout>

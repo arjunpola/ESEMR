@@ -1,5 +1,7 @@
 package redex.mit.lvpei.eyesmart_v1;
 
+import java.util.List;
+
 /**
  * Created by arjunpola on 15/07/14.
  */
@@ -27,7 +29,9 @@ public class Patient {
 
         static final String VisionTechnician="VISIONTECHNICIAN";
         static  final  String CheckinTime="CHECKINTIME";
-   private String fName,lName,pgender,pAge,dob,phone,pcountry,pstate,dist,plocation,ppin,paddress,referal,referalAdd,visionTech,checkintime;
+
+   private String fName,lName,pgender,pAge,dob,phone,pcountry,pstate,dist,plocation,ppin,paddress,referal,referalAdd,visionTech,checkintime,email;
+   private List<Patient> patients;
 
     public String getfName() {
         return fName;
@@ -156,4 +160,23 @@ public class Patient {
     public void setVisionTech(String visionTech) {
         this.visionTech = visionTech;
     }
+
+    public List<Patient> getPatients() {
+        return patients;
+    }
+
+    public void setPatients(List<Patient> patients) {
+        this.patients = patients;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+
+
 }

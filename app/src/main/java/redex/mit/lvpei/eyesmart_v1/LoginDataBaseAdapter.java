@@ -5,9 +5,14 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 
 /**
  * Created by arjunpola on 15/07/14.
@@ -127,11 +132,14 @@ public class LoginDataBaseAdapter {
         ContentValues newValues = new ContentValues();
         newValues.put(Patient.First_Name, p.getfName());
         newValues.put(Patient.Last_Name, p.getlName());
-        newValues.put(Patient.Date_Of_Birth, p.getfName());
+        newValues.put(Patient.Date_Of_Birth, p.getDob());
         newValues.put(Patient.VisionTechnician, p.getVisionTech());
         newValues.put(Patient.CheckinTime, p.getCheckinTime());
-      return   db.insert("PATIENT", null, newValues);
 
+
+        Log.v("Stored",p.getfName());
+
+        return   db.insert("PATIENT", null, newValues);
 
     }
     public  String GeneratePatientScript(Patient p) {
@@ -168,23 +176,42 @@ public class LoginDataBaseAdapter {
     }
 
 
+    public List<Patient> GetAllPatient()
+    {
 
-//
-//
-//    }
+        String selectQuery="select * from "+"PATIENT";
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        String[] data = null;
+        List<Patient> Patients = new ArrayList<Patient>();
+        int i=0;
+        if (cursor.moveToFirst())
+        {
+            Log.v("asdf",cursor.getString(cursor.getColumnIndex(Patient.First_Name)));
+         do {
+              Patient p = new Patient();
 
+              p.setfName(cursor.getString(cursor.getColumnIndex(Patient.First_Name)));
+              p.setlName(cursor.getString(cursor.getColumnIndex(Patient.Last_Name)));
+              p.setDob(cursor.getString(cursor.getColumnIndex(Patient.Date_Of_Birth)));
+              p.setVisionTech(cursor.getString(cursor.getColumnIndex(Patient.VisionTechnician)));
+              p.setGender(cursor.getString(cursor.getColumnIndex(Patient.Gender)));
+              Patients.add(p);
+             cursor.moveToNext();
+          }while (!cursor.isLast());
+            return  Patients;
+                    
+        }
+        else
+        {
 
+            return  null;
+        }
 
-//    public List<Patient> GetAllPatient()
-//    {
-//
-//
-//
-//
-//    }
+    }
     public int getSingleEntry(String email)
     {
         Cursor cursor=db.query("LOGIN", null, " EMAIL=?", new String[]{email}, null, null, null);
+
         if(cursor.getCount()<1) // UserName Not Exist
         {
             cursor.close();

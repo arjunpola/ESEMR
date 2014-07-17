@@ -3,6 +3,7 @@ package redex.mit.lvpei.eyesmart_v1;
 /**
  * Created by arjunpola on 15/07/14.
  */
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,6 +16,9 @@ public class SplashScreen extends Activity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        ActionBar actionBar = getActionBar();
+        actionBar.hide();
+
 
         new Handler().postDelayed(new Runnable() {
 

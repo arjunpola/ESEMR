@@ -182,6 +182,15 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"/>
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"
+        android:hint="Vision Techinician"
+        android:ems="10"
+        android:id="@+id/vision_tech"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

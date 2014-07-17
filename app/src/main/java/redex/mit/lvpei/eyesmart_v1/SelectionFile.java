@@ -1,5 +1,6 @@
 package redex.mit.lvpei.eyesmart_v1;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,16 +17,19 @@ public class SelectionFile extends Activity{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.selection);
 
+        final ActionBar actionBar = getActionBar();
+        actionBar.hide();
+
+        setContentView(R.layout.selection);
         addListenerOnButton();
 
     }
 
     public void addListenerOnButton() {
 
-        imageButton1 = (ImageButton) findViewById(R.id.imageView1);
-        imageButton2 = (ImageButton) findViewById(R.id.imageView2);
+        imageButton1 = (ImageButton) findViewById(R.id.vision_Center);
+        imageButton2 = (ImageButton) findViewById(R.id.corporate);
 
         imageButton1.setOnClickListener(new View.OnClickListener() {
 

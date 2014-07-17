@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MyActivity" >
+    <item android:id="@+id/case_sheet"
+        android:title="Case Sheet"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+</menu>

@@ -8,6 +8,11 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.TableLayout;
+import android.widget.TextView;
+
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -38,7 +43,12 @@ public class PatientListFragment extends Fragment {
      * @param param2 Parameter 2.
      * @return A new instance of fragment PatientListFragment.
      */
-    // TODO: Rename and change types and number of parameters
+
+    public List<Patient> patients;
+    LoginDataBaseAdapter adapter;
+    LayoutInflater rowInflater;
+
+
     public static PatientListFragment newInstance(String param1, String param2) {
         PatientListFragment fragment = new PatientListFragment();
         Bundle args = new Bundle();
@@ -60,7 +70,14 @@ public class PatientListFragment extends Fragment {
         }
 
         Activity a = getActivity();
-        if(a != null) a.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        adapter = new LoginDataBaseAdapter(a.getApplicationContext());
+        adapter.open();
+        patients = adapter.GetAllPatient();
+        rowInflater = (LayoutInflater)a.getSystemService(a.LAYOUT_INFLATER_SERVICE);
+
+        if(a != null) {
+            a.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        }
     }
 
     @Override
@@ -76,8 +93,23 @@ public class PatientListFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_patient_list, container, false);
+        View v = inflater.inflate(R.layout.fragment_patient_list, container, false);
+        TableLayout t = (TableLayout) v.findViewById(R.id.table);
+        if(patients != null) {
+            for (int i = 0; i < patients.size(); i++) {
+
+                LinearLayout row = (LinearLayout) rowInflater.inflate(R.layout.record, null);
+                ((TextView) row.findViewById(R.id.name)).setText(patients.get(i).getfName());
+                ((TextView) row.findViewById(R.id.gen)).setText(patients.get(i).getGender());
+                ((TextView) row.findViewById(R.id.dob)).setText(patients.get(i).getDob());
+                ((TextView) row.findViewById(R.id.vt)).setText(patients.get(i).getVisionTech());
+
+                t.addView(row);
+            }
+        }
+        return v;
     }
+
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {

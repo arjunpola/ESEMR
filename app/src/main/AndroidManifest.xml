@@ -14,30 +14,28 @@
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".OptionDetailActivity"
-            android:label="@string/title_option_detail"
-            android:parentActivityName=".OptionListActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".OptionListActivity" />
-        </activity>
-        <activity
             android:name=".Login"
-            android:label="@string/title_option_detail" >
+            android:label="@string/title_option_detail"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".SplashScreen"
-            android:label="@string/title_option_detail"
+            android:label="eyeSmartEMR"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
             android:name=".SelectionFile"
             android:label="Selection"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".CaseSheet"
+            android:label="CaseSheet"
             android:screenOrientation="portrait">
         </activity>
 

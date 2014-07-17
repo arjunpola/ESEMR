@@ -2,26 +2,21 @@
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/selection">
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/vision_center"
-        android:layout_marginLeft="125dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="231dp"
-        android:id="@+id/imageView1"
-        android:background="@null"/>
+        android:src="@drawable/vision_btn"
+        android:id="@+id/vision_Center"
+        android:layout_marginTop="100dp"/>
+
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/corporate"
-        android:layout_alignBottom="@+id/imageView1"
-        android:layout_toRightOf="@+id/imageView1"
-        android:layout_marginLeft="151dp"
-        android:id="@+id/imageView2"
-        android:background="@null"/>
+        android:id="@+id/corporate"
+        android:src="@drawable/corporate_btn"
+        android:layout_below="@id/vision_Center"
+        android:layout_alignStart="@+id/vision_Center" />
 </RelativeLayout>
