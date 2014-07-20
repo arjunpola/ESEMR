@@ -9,6 +9,8 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.support.v13.app.FragmentPagerAdapter;
 import android.os.Bundle;
+import android.support.v4.view.PagerTabStrip;
+import android.support.v4.view.PagerTitleStrip;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.Gravity;
@@ -38,13 +40,14 @@ public class DetailForms extends Activity {
      * The {@link ViewPager} that will host the section contents.
      */
     ViewPager mViewPager;
+    PagerTabStrip pagerTabStrip;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_forms);
 
-
+        pagerTabStrip = (PagerTabStrip) findViewById(R.id.pager_title_strip);
 
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
@@ -53,6 +56,7 @@ public class DetailForms extends Activity {
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mSectionsPagerAdapter);
+
 
     }
 
@@ -175,10 +179,10 @@ public class DetailForms extends Activity {
                     return rootView2;
 
                 case 3:
-                    View rootView3 = inflater.inflate(R.layout.case_sheet, container, false);
+                    View rootView3 = inflater.inflate(R.layout.new_ocular, container, false);
                     return rootView3;
             }
-            View rootView = inflater.inflate(R.layout.fragment_detail_forms, container, false);
+            View rootView = null;
             return rootView;
         }
     }

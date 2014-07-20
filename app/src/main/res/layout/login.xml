@@ -64,7 +64,7 @@
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="#DBF4FA"
+        android:background="@drawable/submit_btn"
         android:onClick="auth"
         android:textSize="20dp"
         android:textColor="#4CB4DB"

@@ -44,7 +44,194 @@
         <item>India</item>
     </string-array>
 
-    <string name="title_activity_detail_forms">Forms</string>
+    <string-array name="complaint">
+        <item>Redness</item>
+        <item>Watering</item>
+        <item>Discharge</item>
+        <item>Itching</item>
+        <item>Growth</item>
+        <item>Diminished distant vision</item>
+        <item>Diminished near vision</item>
+        <item>Diminished color vision</item>
+        <item>Diminished field of vision</item>
+        <item>Diminished night vision</item>
+        <item>Double Vision</item>
+        <item>Colored Haloes</item>
+        <item>Glare</item>
+        <item>Floaters</item>
+        <item>No Visual Complaints</item>
+        <item>Irritation</item>
+        <item>Growth of Mass</item>
+        <item>Headache</item>
+    </string-array>
+
+    <string-array name="eye">
+        <item>OD</item>
+        <item>OS</item>
+        <item>OU</item>
+    </string-array>
+
+    <string-array name="duration">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+    </string-array>
+
+    <string-array name="duration_time">
+        <item>Hour(s)</item>
+        <item>Day(s)</item>
+        <item>Week(s)</item>
+        <item>Month(s)</item>
+        <item>Year(s)</item>
+    </string-array>
+    <string-array name="bv_mac_fun">
+        <item>Normal</item>
+        <item>Abnormal</item>
+    </string-array>
+
+    <string-array name="media">
+        <item>Clear</item>
+        <item>Hazy</item>
+        <item>No View</item>
+    </string-array>
+    <string-array name="disease">
+        <item>Glaucoma</item>
+        <item>Hypertension</item>
+        <item>Diabetes Mellitus</item>
+        <item>Asthma</item>
+        <item>Coronary Artery Disease</item>
+        <item>Acid Peptic Disease</item>
+        <item>Tuberculosis</item>
+        <item>Malignancy</item>
+        <item>Thyroid</item>
+        <item>Arthritis</item>
+    </string-array>
+
+    <string-array name="year">
+        <item>Month(s)</item>
+        <item>Year(s)</item>
+    </string-array>
+
+    <string-array name="relation">
+        <item>Father</item>
+        <item>Mother</item>
+        <item>Sibling(S)</item>
+    </string-array>
+
+    <string-array name="family_disease">
+        <item>Glaucoma</item>
+        <item>Diabetes Mellitus</item>
+        <item>Tuberculosis</item>
+        <item>Retinal Detachment</item>
+        <item>Cataract</item>
+        <item>Hypertension</item>
+        <item>visual Loss</item>
+        <item>Carcinoma</item>
+        <item>Coronary Artery Disease</item>
+    </string-array>
+
+    <string-array name="nutritional_status">
+        <item>Malnourished</item>
+        <item>Normal</item>
+        <item>Obese</item>
+    </string-array>
+    <string-array name="od_select1">
+        <item>I</item>
+        <item>II</item>
+    </string-array>
+
+    <string-array name="od_select2">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+    </string-array>
+
+    <string-array name="select_min">
+        <item>01</item>
+        <item>05</item>
+        <item>03</item>
+    </string-array>
+
+    <string-array name="pvd">
+        <item>Absent</item>
+        <item>Present</item>
+    </string-array>
+
+    <string-array name="optic_disc">
+        <item>Normal</item>
+        <item>Abnormal</item>
+    </string-array>
+
+    <string-array name="optic_disc_size">
+        <item>Small size Disc</item>
+        <item>Medium size Disc</item>
+        <item>Large size Disc</item>
+    </string-array>
+
+    <string-array name="cup_disc_ratio">
+        <item>0.1</item>
+        <item>0.2</item>
+        <item>0.3</item>
+        <item>0.4</item>
+        <item>0.5</item>
+        <item>0.55</item>
+        <item>0.6</item>
+        <item>0.65</item>
+        <item>0.7</item>
+        <item>0.75</item>
+        <item>0.8</item>
+        <item>0.85</item>
+        <item>0.9</item>
+        <item>0.95</item>
+        <item>Near Total Cupping</item>
+        <item>Total Cupping</item>
+    </string-array>
+
+    <string name="title_activity_detail_forms">Clinical Forms</string>
     <string name="title_section1">Case Sheet</string>
     <string name="title_section2">Refraction</string>
     <string name="title_section3">Ocular Examination</string>

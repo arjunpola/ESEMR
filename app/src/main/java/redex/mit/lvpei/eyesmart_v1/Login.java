@@ -69,20 +69,24 @@ public class Login extends Activity {
             Toast.makeText(getBaseContext(), "Missing Values", Toast.LENGTH_SHORT).show();
         else {
             // Toast.makeText(getBaseContext(), "Email: " + emailBox.getText().toString() + " Pin: " + pinBox.getText().toString(), Toast.LENGTH_SHORT).show();
-            pin = Integer.parseInt(pinBox.getText().toString());
-            int storedPin=loginDataBaseAdapter.getSingleEntry(email);
-            Toast.makeText(getBaseContext(),String.valueOf(storedPin),Toast.LENGTH_LONG).show();
-            if(storedPin == -1 || storedPin != pin)
-            {
-                new Auth().execute(email,String.valueOf(pin));
-            }
-            else
-            {
-                //Toast.makeText(this,"LSUCCESS",Toast.LENGTH_LONG).show();
+//            pin = Integer.parseInt(pinBox.getText().toString());
+//            int storedPin=loginDataBaseAdapter.getSingleEntry(email);
+//            Toast.makeText(getBaseContext(),String.valueOf(storedPin),Toast.LENGTH_LONG).show();
+//            if(storedPin == -1 || storedPin != pin)
+//            {
+//                new Auth().execute(email,String.valueOf(pin));
+//            }
+//            else
+//            {
+//                //Toast.makeText(this,"LSUCCESS",Toast.LENGTH_LONG).show();
+//                Intent i = new Intent(this,Home.class);
+//                startActivity(i);
+//                finish();
+//            }
                 Intent i = new Intent(this,Home.class);
                 startActivity(i);
                 finish();
-            }
+
         }
 
     }

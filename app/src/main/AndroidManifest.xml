@@ -11,11 +11,20 @@
             android:name=".Login"
             android:label="@string/title_option_detail"
             android:screenOrientation="portrait" >
+
         </activity>
         <activity
             android:name=".SplashScreen"
             android:label="eyeSmart"
             android:screenOrientation="portrait" >
+
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
         </activity>
         <activity
             android:name=".SelectionFile"
@@ -36,11 +45,6 @@
             android:name=".Home"
             android:label="eyeSmart"
             android:screenOrientation="portrait" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".ViewPatients"

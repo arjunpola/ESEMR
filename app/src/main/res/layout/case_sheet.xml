@@ -1,14 +1,19 @@
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="fill_parent"
-    android:layout_width="fill_parent">
+    android:layout_width="fill_parent"
+    android:background="#CCEAFA"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="0dp"
+    >
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="wrap_content"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin">
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:id="@+id/editTextre">
 
         <CheckBox
             android:layout_width="wrap_content"
@@ -18,25 +23,26 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
+            android:background="#0094cc"
             android:checked="false" />
         <Spinner
             android:id="@+id/spinner1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:spinnerMode="dropdown"
-            android:entries="@array/country_arrays"
-            android:clickable="false"
-            android:layout_marginTop="27dp"
-            android:layout_alignTop="@+id/timePicker"
+            android:entries="@array/complaint"
+            android:layout_below="@+id/textView3"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/spinner"
+            android:layout_alignEnd="@+id/spinner" />
         <Spinner
             android:id="@+id/spinner2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:spinnerMode="dropdown"
-            android:entries="@array/country_arrays"
-            android:clickable="false"
+            android:entries="@array/eye"
+            android:layout_marginRight="20dp"
             android:layout_alignTop="@+id/spinner1"
             android:layout_alignLeft="@+id/textView2"
             android:layout_alignStart="@+id/textView2"
@@ -74,10 +80,11 @@
             android:inputType="textMultiLine"
             android:ems="10"
             android:id="@+id/editText"
-            android:hint="TextArea"
+            android:hint=""
             android:layout_below="@+id/timePicker"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="27dp" />
 
         <CheckBox
             android:layout_width="wrap_content"
@@ -85,6 +92,7 @@
             android:text="History of Present Illness"
             android:id="@+id/checkBox2"
             android:checked="false"
+            android:background="#0094cc"
             android:layout_below="@+id/editText"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
@@ -110,6 +118,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_marginTop="20dp"
+            android:background="#0094cc"
             android:checked="false" />
 
         <TextView
@@ -126,11 +135,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:spinnerMode="dropdown"
-            android:entries="@array/country_arrays"
+            android:entries="@array/disease"
             android:layout_below="@+id/textView4"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginTop="28dp" />
+            android:layout_marginTop="28dp"
+            android:layout_alignRight="@+id/editText5"
+            android:layout_alignEnd="@+id/editText5" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -142,13 +153,16 @@
             android:layout_alignStart="@+id/spinner2"
             android:layout_marginTop="10dp"/>
 
-        <TimePicker
+        <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/timePicker2"
             android:layout_alignTop="@+id/spinner"
             android:layout_alignLeft="@+id/textView6"
-            android:layout_alignStart="@+id/textView6" />
+            android:layout_alignStart="@+id/textView6"
+            android:entries="@array/disease"
+            android:layout_alignRight="@+id/editText6"
+            android:layout_alignEnd="@+id/editText6" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -172,6 +186,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_marginTop="30dp"
+            android:background="#0094cc"
             android:checked="false" />
 
         <TextView
@@ -188,7 +203,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:spinnerMode="dropdown"
-            android:entries="@array/country_arrays"
+            android:entries="@array/relation"
             android:layout_below="@+id/textView7"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
@@ -203,16 +218,6 @@
             android:layout_above="@+id/spinner3"
             android:layout_toRightOf="@+id/textView2" />
 
-        <Spinner
-            android:id="@+id/spinner4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:spinnerMode="dropdown"
-            android:entries="@array/country_arrays"
-            android:layout_below="@+id/textView8"
-            android:layout_toRightOf="@+id/spinner"
-            android:layout_alignRight="@+id/timePicker2"
-            android:layout_alignEnd="@+id/timePicker2" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -234,14 +239,18 @@
             android:layout_below="@+id/editText4"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
+            android:background="#0094cc"
             android:layout_marginTop="30dp" />
 
-        <TimePicker
+        <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/timePicker"
-            android:layout_below="@+id/textView3"
-            android:layout_toRightOf="@+id/spinner2" />
+            android:entries="@array/duration"
+            android:layout_alignTop="@+id/spinner1"
+            android:layout_alignLeft="@+id/textView3"
+            android:layout_alignStart="@+id/textView3"
+            android:layout_toLeftOf="@+id/radioButton2" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -258,8 +267,8 @@
             android:text="Eye"
             android:id="@+id/textView10"
             android:layout_below="@+id/checkBox5"
-            android:layout_alignLeft="@+id/spinner4"
-            android:layout_alignStart="@+id/spinner4" />
+            android:layout_alignRight="@+id/textView8"
+            android:layout_alignEnd="@+id/textView8" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -293,11 +302,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:spinnerMode="dropdown"
-            android:entries="@array/country_arrays"
+            android:entries="@array/eye"
             android:layout_alignTop="@+id/editText5"
             android:layout_alignLeft="@+id/textView8"
             android:layout_alignStart="@+id/textView8"
-            android:layout_toLeftOf="@+id/textView11" />
+            android:layout_toLeftOf="@+id/textView11"
+            android:layout_alignBottom="@+id/editText5" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -338,6 +348,7 @@
             android:checked="false"
             android:layout_below="@+id/editText8"
             android:layout_alignParentLeft="true"
+            android:background="#0094cc"
             android:layout_alignParentStart="true" />
 
         <EditText
@@ -360,6 +371,7 @@
             android:layout_below="@+id/editText9"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
+            android:background="#0094cc"
             android:layout_marginTop="36dp" />
 
         <EditText
@@ -381,6 +393,7 @@
             android:id="@+id/checkBox8"
             android:layout_marginTop="38dp"
             android:layout_below="@+id/editText10"
+            android:background="#0094cc"
             android:layout_alignRight="@+id/checkBox5"
             android:layout_alignEnd="@+id/checkBox5" />
 
@@ -404,6 +417,7 @@
             android:checked="false"
             android:layout_marginTop="38dp"
             android:layout_below="@+id/editText11"
+            android:background="#0094cc"
             android:layout_alignRight="@+id/checkBox7"
             android:layout_alignEnd="@+id/checkBox7" />
 
@@ -412,10 +426,9 @@
             android:layout_height="wrap_content"
             android:text="Malnourished"
             android:id="@+id/radioButton"
+            android:checked="false"
             android:layout_below="@+id/checkBox9"
-            android:layout_alignRight="@+id/checkBox7"
-            android:layout_alignEnd="@+id/checkBox7"
-            android:checked="false" />
+            android:layout_toLeftOf="@+id/spinner5" />
 
         <RadioButton
             android:layout_width="wrap_content"
@@ -423,9 +436,9 @@
             android:text="Normal"
             android:id="@+id/radioButton2"
             android:checked="false"
-            android:layout_below="@+id/checkBox9"
-            android:layout_alignRight="@+id/textView11"
-            android:layout_alignEnd="@+id/textView11" />
+            android:layout_alignTop="@+id/radioButton"
+            android:layout_alignRight="@+id/editText11"
+            android:layout_alignEnd="@+id/editText11" />
 
         <RadioButton
             android:layout_width="wrap_content"
@@ -433,8 +446,9 @@
             android:text="Obese"
             android:id="@+id/radioButton3"
             android:checked="false"
-            android:layout_alignTop="@+id/radioButton2"
-            android:layout_toRightOf="@+id/spinner4" />
+            android:layout_alignTop="@+id/radioButton"
+            android:layout_toRightOf="@+id/spinner2" />
+
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -444,6 +458,7 @@
             android:checked="false"
             android:layout_below="@+id/radioButton"
             android:layout_alignLeft="@+id/checkBox9"
+            android:background="#0094cc"
             android:layout_alignStart="@+id/checkBox9" />
 
         <EditText
@@ -467,6 +482,7 @@
             android:layout_alignLeft="@+id/editText11"
             android:layout_alignStart="@+id/editText11"
             android:layout_marginTop="38dp"
+            android:background="#0094cc"
             android:checked="false" />
 
         <EditText
@@ -487,7 +503,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:spinnerMode="dropdown"
-            android:entries="@array/country_arrays"
+            android:entries="@array/family_disease"
             android:layout_above="@+id/editText4"
             android:layout_alignLeft="@+id/textView8"
             android:layout_alignStart="@+id/textView8"
