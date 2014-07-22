@@ -175,7 +175,7 @@ public class DetailForms extends Activity {
                     return rootView;
 
                 case 2:
-                    View rootView2 = inflater.inflate(R.layout.case_sheet, container, false);
+                    View rootView2 = inflater.inflate(R.layout.new_refraction, container, false);
                     return rootView2;
 
                 case 3:

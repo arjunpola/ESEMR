@@ -71,6 +71,166 @@
         <item>OU</item>
     </string-array>
 
+    <string-array name="lens_material_remarks">
+        <item>	Mineral	</item>
+        <item>	CR 39	</item>
+        <item>	Patient Choice	</item>
+        <item>	Polycarobonate	</item>
+        <item>	Trivex	</item>
+        <item>	Organic	</item>
+    </string-array>
+
+    <string-array name="mode_of_wear_remarks">
+        <item>	Distance and Near	</item>
+        <item>	Distance Only	</item>
+        <item>	Near only	</item>
+        <item>	For all distances	</item>
+        <item>	Intermediate Distance	</item>
+        <item>	Occassional Use	</item>
+        <item>	Outdoor Only	</item>
+        <item>	Occupational Use	</item>
+        <item>	Part-Time Use	</item>
+        <item>	Constant Wear	</item>
+        <item>	Protective Eye wear	</item>
+    </string-array>
+
+    <string-array name="lens_type_remarks">
+        <item>	S/Vn	</item>
+        <item>	Kryptok	</item>
+        <item>	Bifocal/PALs	</item>
+        <item>	PAL	</item>
+        <item>	Separate Distance and Near	</item>
+        <item>	Trifocal	</item>
+        <item>	Single Vision Sun Glasses	</item>
+        <item>	Lenticular	</item>
+        <item>	Aspheric	</item>
+        <item>	Kryptok Bifocal	</item>
+        <item>	D Bifocal	</item>
+        <item>	Executive Bifocal	</item>
+        <item>	SVn/PALs	</item>
+    </string-array>
+
+    <string-array name="lens_tint_remakrs">
+        <item>	 White 	</item>
+        <item>	Amber	</item>
+        <item>	 B1	</item>
+        <item>	B2	</item>
+        <item>	B3	</item>
+        <item>	Brown	</item>
+        <item>	G-15	</item>
+        <item>	Gradient Tint	</item>
+        <item>	Patient Choice	</item>
+        <item>	Photogrey	</item>
+        <item>	Photobrown	</item>
+        <item>	SP1	</item>
+        <item>	SP11	</item>
+        <item>	SP2	</item>
+        <item>	Yellow	</item>
+        <item>	Grey	</item>
+    </string-array>
+
+    <string-array name="lens_surface_coating">
+        <item>	None	</item>
+        <item>	Patient Choice	</item>
+        <item>	ARC	</item>
+        <item>	Flash Mirror Coating	</item>
+        <item>	Mirror Coating	</item>
+        <item>	Hardcoat	</item>
+        <item>	HMT	</item>
+        <item>	 Titus	</item>
+        <item>	Crizal	</item>
+        <item>	Crizal A2	</item>
+        <item>	Trio	</item>
+        <item>	Optifog	</item>
+        <item>	Others	</item>
+    </string-array>
+
+    <string-array name="frame_material_remarks">
+        <item>	Patient Choice	</item>
+        <item>	Shell	</item>
+        <item>	Metal	</item>
+        <item>	Titanium	</item>
+        <item>	Shell(Pediatric Use)	</item>
+        <item>	Hypo Allergenic Metal	</item>
+        <item>	Plastic	</item>
+        <item>	Carbon	</item>
+    </string-array>
+
+    <string-array name="speciality_lens_remarks">
+        <item>	None	</item>
+        <item>	High Index	</item>
+        <item>	Lenticular	</item>
+        <item>	Polarized Lens	</item>
+        <item>	Polycarbonate	</item>
+        <item>	CR 39/Polycarbonate	</item>
+        <item>	Trivex	</item>
+        <item>	Aspheric Design	</item>
+        <item>	Polarized Sunglasses	</item>
+        <item>	Wrap Sunglasses	</item>
+        <item>	Polarized Prescription Lenses	</item>
+    </string-array>
+
+    <string-array name="language">
+        <item>	English	</item>
+        <item>	Hindi	</item>
+        <item>	Telugu	</item>
+        <item>	Marathi	</item>
+        <item>	Kannada	</item>
+        <item>	Malayalam	</item>
+        <item>	Gujarati	</item>
+        <item>	Bengali	</item>
+        <item>	Oriya	</item>
+        <item>	Tamil	</item>
+    </string-array>
+
+    <string-array name="color_vision">
+        <item>	Normal	</item>
+        <item>	Red Green Def	</item>
+        <item>	Total Def	</item>
+    </string-array>
+
+    <string-array name="near">
+        <item>	N 05	</item>
+        <item>	N 06	</item>
+        <item>	N 08	</item>
+        <item>	N 10	</item>
+        <item>	N 12	</item>
+        <item>	N 14	</item>
+        <item>	N 16	</item>
+        <item>	N 18	</item>
+        <item>	N 24	</item>
+        <item>	N 36	</item>
+        <item>	Defer	</item>
+        <item>	6/5	</item>
+        <item>	6/6	</item>
+        <item>	6/6p	</item>
+        <item>	6/9	</item>
+        <item>	6/9p	</item>
+        <item>	6/12	</item>
+        <item>	6/12p	</item>
+        <item>	6/18	</item>
+        <item>	6/18p	</item>
+        <item>	6/24	</item>
+        <item>	6/24p	</item>
+        <item>	6/36	</item>
+        <item>	6/60	</item>
+        <item>	&gt; N 36	</item>
+        <item>	&gt; 6/60	</item>
+    </string-array>
+
+    <string-array name="special_instruction">
+        <item>	None </item>
+        <item>	Bisect the Pupil with the segment top	</item>
+        <item>	Right eye clear Plano Lens Balance	</item>
+        <item>	Left eye clear Plano Lens Balance	</item>
+        <item>	Right eye Frosted Lens	</item>
+        <item>	Left eye Frosted Lens	</item>
+        <item>	Cosmetic  Balance Right Eye	</item>
+        <item>	Cosmetic  Balance Left Eye	</item>
+        <item>	Change only Right Eye Lens	</item>
+        <item>	Change only Left Eye Lens	</item>
+    </string-array>
+
     <string-array name="duration">
         <item>1</item>
         <item>2</item>
@@ -102,6 +262,25 @@
         <item>28</item>
         <item>29</item>
         <item>30</item>
+    </string-array>
+
+    <string-array name="at_cms">
+        <item>Normal</item>
+        <item>Red Green Def</item>
+        <item>Total Def</item>
+    </string-array>
+    
+    <string-array name="type_of_lens">
+        <item>Single Vision-Distance</item>
+        <item>Single Vision-Near</item>
+        <item>Bifocal</item>
+        <item>Progressive</item>
+    </string-array>
+
+    <string-array name="tac">
+        <item>38/55/84 Cms</item>
+        <item>Amsler Grid</item>
+        <item>Miscellaneous</item>
     </string-array>
 
     <string-array name="duration_time">

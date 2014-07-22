@@ -31,6 +31,12 @@ public class Home extends Activity {
         startActivity(i);
     }
 
+    public void viewPatients(View v)
+    {
+        Intent i = new Intent(this,ViewPatients.class);
+        startActivity(i);
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.home,menu);
