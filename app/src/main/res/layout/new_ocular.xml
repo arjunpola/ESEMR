@@ -1947,85 +1947,69 @@
 
             <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5">
 
                 <TextView
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:text="Optic Disk"
-                    android:layout_marginRight="20dp"
+                    android:text="Optic Disc"
                     android:layout_alignParentTop="true"/>
 
             </RelativeLayout>
             <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1">
 
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/checkBox13_da"
+                    android:id="@+id/checkBox13_b_optic"
                     android:layout_alignParentTop="true"
                     android:checked="false" />
 
-                <RadioGroup
+                <Spinner
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinner_optic"
+                    android:layout_toRightOf="@id/checkBox13_b_optic" />
+
+                <EditText
                     android:layout_width="wrap_content"
-                    android:layout_height="fill_parent"
-                    android:layout_alignParentTop="true"
-                    android:layout_toRightOf="@+id/checkBox13_da"
-                    android:orientation="horizontal"
-                    android:id="@+id/radioButton4_da">
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Yes"
-                        android:id="@+id/radio_yes3a"/>
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="No"
-                        android:id="@+id/radio_no3a"/>
-
-                </RadioGroup>
-
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/spinner_optic"
+                    android:layout_marginTop="50dp"
+                    android:ems="8"
+                    />
 
             </RelativeLayout>
             <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1">
 
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/checkBox13_ab"
+                    android:id="@+id/checkBox13_c_optic"
                     android:layout_alignParentTop="true"
                     android:checked="false" />
 
-                <RadioGroup
+                <Spinner
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinner1_optic"
+                    android:layout_toRightOf="@id/checkBox13_c_optic" />
+
+                <EditText
                     android:layout_width="wrap_content"
-                    android:layout_height="fill_parent"
-                    android:layout_alignParentTop="true"
-                    android:layout_toRightOf="@+id/checkBox13_ab"
-                    android:orientation="horizontal"
-                    android:id="@+id/radioButton4_d">
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/spinner1_optic"
+                    android:layout_marginTop="50dp"
+                    android:ems="8"
+                    />
 
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Yes"
-                        android:id="@+id/radio_yes3b"/>
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="No"
-                        android:id="@+id/radio_no3b"/>
-
-                </RadioGroup>
 
 
             </RelativeLayout>
@@ -2036,68 +2020,340 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="20dp"
-            android:paddingBottom="50dp">
+            android:layout_marginTop="20dp">
 
             <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2">
 
                 <TextView
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:text="Syringing"
-                    android:layout_marginRight="20dp"
+                    android:text="Optic Disc Size"
                     android:layout_alignParentTop="true"/>
 
             </RelativeLayout>
             <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1">
-
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:id="@+id/slit_lamp_examination_section2_et1"
-                    android:ems="8"
-                    android:layout_toRightOf="@+id/slit_lamp_examination_section2_cb1" />
 
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/slit_lamp_examination_section2_cb1"
+                    android:id="@+id/checkBox13_od_size"
                     android:layout_alignParentTop="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
                     android:checked="false" />
 
+                <Spinner
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinner_od_size"
+                    android:layout_toRightOf="@id/checkBox13_od_size" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox13b_od_size"
+                    android:layout_alignParentTop="true"
+                    android:checked="false" />
+
+                <Spinner
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinnerb_od_size"
+                    android:layout_toRightOf="@id/checkBox13b_od_size" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Cup/Disc Ratio"
+                    android:layout_alignParentTop="true"/>
 
             </RelativeLayout>
             <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1">
-
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:ems="8"
-                    android:id="@+id/slit_lamp_examination_section2_et6" />
 
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/slit_lamp_examination_section2_cb2"
+                    android:id="@+id/checkBox13_cd_ratio"
                     android:layout_alignParentTop="true"
-                    android:layout_toLeftOf="@+id/slit_lamp_examination_section2_et6" />
+                    android:checked="false" />
+
+                <Spinner
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinner_cd_ratio"
+                    android:layout_toRightOf="@id/checkBox13_cd_ratio" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox13b_cd_ratio"
+                    android:layout_alignParentTop="true"
+                    android:checked="false" />
+
+                <Spinner
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinnerb_cd_ratio"
+                    android:layout_toRightOf="@id/checkBox13b_cd_ratio" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Blood Vessels"
+                    android:layout_alignParentTop="true"/>
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox13_b_bv"
+                    android:layout_alignParentTop="true"
+                    android:text="Arteries"
+                    android:checked="false" />
+
+                <Spinner
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinner_bv"
+                    android:layout_toRightOf="@id/checkBox13_b_bv" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/spinner_bv"
+                    android:layout_marginTop="50dp"
+                    android:ems="8"
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox13_c_bv"
+                    android:layout_alignParentTop="true"
+                    android:text="Arteries"
+                    android:checked="false" />
+
+                <Spinner
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinner1_bv"
+                    android:layout_toRightOf="@id/checkBox13_c_bv" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/spinner1_bv"
+                    android:layout_marginTop="50dp"
+                    android:ems="8"
+                    />
+
 
 
             </RelativeLayout>
+            </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/checkBox13_b_bv_v"
+                            android:layout_alignParentTop="true"
+                            android:text="Veins"
+                            android:checked="false" />
+
+                        <Spinner
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/spinner_bv_v"
+                            android:layout_toRightOf="@id/checkBox13_b_bv_v" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignStart="@id/spinner_bv_v"
+                            android:layout_marginTop="50dp"
+                            android:ems="8"
+                            />
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/checkBox13_c_bv_va"
+                            android:layout_alignParentTop="true"
+                            android:text="Veins"
+                            android:checked="false" />
+
+                        <Spinner
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/spinner1_bv_va"
+                            android:layout_toRightOf="@id/checkBox13_c_bv_va" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignStart="@id/spinner1_bv_va"
+                            android:layout_marginTop="50dp"
+                            android:ems="8"
+                            />
+
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp"
+                    android:paddingBottom="50dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:paddingRight="30dp">
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:id="@+id/slit_lamp_examination_section_et1_ratio"
+                            android:ems="3"
+                            android:layout_toRightOf="@+id/slit_lamp_examination_section_cb1_ratio" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:id="@+id/slit_lamp_examination_section_et1_ratio1"
+                            android:ems="3"
+                            android:layout_toRightOf="@+id/slit_lamp_examination_section_et1_ratio" />
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/slit_lamp_examination_section_cb1_ratio"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:text="A/V Ratio"
+                            android:checked="false" />
+
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_weight="1">
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:ems="3"
+                            android:id="@+id/slit_lamp_examination_section_et6_ratio" />
+
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:id="@+id/slit_lamp_examination_section_et1_ratio1b"
+                            android:ems="3"
+                            android:layout_toRightOf="@+id/slit_lamp_examination_section_et6_ratio" />
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/slit_lamp_examination_section_cb2_ratio"
+                            android:layout_alignParentTop="true"
+                            android:text="A/V Ratio"
+                            android:layout_toLeftOf="@+id/slit_lamp_examination_section_et6_ratio" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
         </LinearLayout>
 
 

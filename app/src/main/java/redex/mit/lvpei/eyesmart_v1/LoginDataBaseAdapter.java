@@ -73,6 +73,54 @@ public class LoginDataBaseAdapter {
             Patient.CheckinTime +" text ,"+
             Patient.VisionTechnician +" text)";
 
+    static  final String CREATE_STATES_TABLE = "CREATE TABLE IF NOT EXISTS `tbl_states` (\n" +
+            "  `tstate_id` INTEGER AUTOINCREMENT,\n" +
+            "  `tstate_country_id` INTEGER NOT NULL,\n" +
+            "  `tstate_name` varchar(150) NOT NULL,\n" +
+            "  PRIMARY KEY  (`tstate_id`),\n" +
+            ")";
+
+    static final String CREATE_DIST_TABLE = "CREATE TABLE IF NOT EXISTS `tbl_districts` (\n" +
+            "  `tdis_id` INTEGER AUTOINCREMENT,\n" +
+            "  `tdis_state_id` INTEGER NOT NULL,\n" +
+            "  `tdis_name` varchar(150) NOT NULL,\n" +
+            "  PRIMARY KEY  (`tdis_id`),\n" +
+            "  KEY `tdis_state_id` (`tdis_state_id`)\n" +
+            ")";
+
+    static final String POPULATE_STATES = "INSERT INTO `tbl_states` (`tstate_id`, `tstate_country_id`, `tstate_name`) VALUES\n" +
+            "(1, 101, 'Andhra Pradesh'),\n" +
+            "(2, 101, 'Delhi'),\n" +
+            "(3, 101, 'West Bengal'),\n" +
+            "(4, 101, 'Orissa'),\n" +
+            "(5, 101, 'Maharashtra'),\n" +
+            "(6, 101, 'Mizoram'),\n" +
+            "(7, 101, 'Manipur'),\n" +
+            "(8, 101, 'Meghalaya'),\n" +
+            "(9, 101, 'Nagaland'),\n" +
+            "(10, 101, 'Tripura'),\n" +
+            "(11, 101, 'Sikkim'),\n" +
+            "(12, 101, 'Pondicherry'),\n" +
+            "(13, 101, 'Goa'),\n" +
+            "(14, 101, 'Chhattisgarh'),\n" +
+            "(15, 101, 'Kerala'),\n" +
+            "(16, 101, 'Daman & Diu'),\n" +
+            "(17, 101, 'Arunachal Pradesh'),\n" +
+            "(18, 101, 'Bihar'),\n" +
+            "(19, 101, 'Haryana'),\n" +
+            "(20, 101, 'Jammu and Kashmir'),\n" +
+            "(21, 101, 'Karnataka'),\n" +
+            "(22, 101, 'Rajasthan'),\n" +
+            "(23, 101, 'Tamil Nadu'),\n" +
+            "(24, 101, 'Assam'),\n" +
+            "(25, 101, 'Uttarakhand'),\n" +
+            "(26, 101, 'Madhya Pradesh'),\n" +
+            "(27, 101, 'Uttar Pradesh'),\n" +
+            "(28, 101, 'Gujarat'),\n" +
+            "(29, 101, 'Himachal Pradesh'),\n" +
+            "(30, 101, 'Jharkand'),\n" +
+            "(31, 101, 'Punjab'),\n" +
+            "(32, 101, 'Telangana');";
 
 
     public SQLiteDatabase db;
@@ -93,6 +141,15 @@ public class LoginDataBaseAdapter {
     public void close()
     {
         db.close();
+    }
+
+    public void getStates()
+    {
+        Cursor cursor = db.query("tbl_states",null,null,null,null,null,null);
+        if(cursor.moveToFirst())
+        {
+            Log.v("State",cursor.getString(cursor.getColumnIndex("tstate_name")));
+        }
     }
 
     public SQLiteDatabase getDatabaseInstance()
@@ -142,39 +199,6 @@ public class LoginDataBaseAdapter {
         return   db.insert("PATIENT", null, newValues);
 
     }
-    public  String GeneratePatientScript(Patient p) {
-
-
-
-        String Query = " insert into tbl_patient ( tp_title , tp_first_name , tp_last_name ,tp_next_of_kin ,tp_next_of_kin_name ,tp_gender," +
-                "tp_dob , tp_email , tp_phone , tp_cell_number , tp_address ,  tp_image , tp_category  ," +
-                "tp_country , tp_state , tp_district , tp_location , tp_pin_code,tp_mandal ,tp_created_time ,)values" +
-                "(1,'" + p.getfName() + "','" +
-                p.getlName() + "'," +
-                1 + "," +
-                "'asdf'" + "," +
-               "M" + ",'" +
-                p.getDob() + "'," +
-                p.getPhone() + "," +
-                "12" + ",'" +
-                p.getAddress() + "'," +
-                "'sadf'" + "," +
-                1 + ",'" +
-                p.getCountry() + "','" +
-
-                p.getEmail_ID() + "'," +
-                p.getPhone() + "," +
-                "0000," + "'" + p.getAddress() + "'," +
-                "abcd,abcd," + 101 + "," + 1 + ",'" + p.getLocation() + "','" + p.getPin() + "'," + 123 + ",'13-07-2014 10:10:10'";
-//
-        return Query;
-
-//        insert into tbl_patient ( tp_title , tp_first_name , tp_last_name ,tp_next_of_kin ,tp_next_of_kin_name ,tp_gender,tp_dob , tp_email , tp_phone , tp_cell_number , tp_address ,  tp_image , tp_category  ,tp_country , tp_state , tp_district , tp_location , tp_pin_code,tp_mandal ,tp_created_time)
-//        values('mr','','n',1,'asdf','M','1992-06-10','adfasd','12','1','sadf','image',1,101,1,4,null,'123',1,'9999-12-31 23:59:59');
-
-
-    }
-
 
     public List<Patient> GetAllPatient()
     {
