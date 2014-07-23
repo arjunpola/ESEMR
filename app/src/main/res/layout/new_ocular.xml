@@ -2,7 +2,7 @@
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="fill_parent"
+    android:layout_height="match_parent"
     android:background="#CCEAFA"
     android:layout_marginLeft="20dp"
     android:layout_marginRight="0dp">
@@ -1601,7 +1601,7 @@
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/checkBox13_da"
+                    android:id="@+id/checkBox13_lacrimal_da"
                     android:layout_alignParentTop="true"
                     android:checked="false" />
 
@@ -1609,21 +1609,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
                     android:layout_alignParentTop="true"
-                    android:layout_toRightOf="@+id/checkBox13_da"
+                    android:layout_toRightOf="@+id/checkBox13_lacrimal_da"
                     android:orientation="horizontal"
-                    android:id="@+id/radioButton4_da">
+                    android:id="@+id/radioButton4_lacrimal_da">
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Yes"
-                        android:id="@+id/radio_yes3a"/>
+                        android:id="@+id/radio_lacrimal_yes3a"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="No"
-                        android:id="@+id/radio_no3a"/>
+                        android:id="@+id/radio_lacrimal_no3a"/>
 
                 </RadioGroup>
 
@@ -1637,7 +1637,7 @@
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/checkBox13_ab"
+                    android:id="@+id/checkBox13_lacrimal_ab"
                     android:layout_alignParentTop="true"
                     android:checked="false" />
 
@@ -1645,21 +1645,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
                     android:layout_alignParentTop="true"
-                    android:layout_toRightOf="@+id/checkBox13_ab"
+                    android:layout_toRightOf="@+id/checkBox13_lacrimal_ab"
                     android:orientation="horizontal"
-                    android:id="@+id/radioButton4_d">
+                    android:id="@+id/radioButton4_lacrimal_d">
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Yes"
-                        android:id="@+id/radio_yes3b"/>
+                        android:id="@+id/radio_lacrimal_yes3b"/>
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="No"
-                        android:id="@+id/radio_no3b"/>
+                        android:id="@+id/radio_lacrimal_no3b"/>
 
                 </RadioGroup>
 
@@ -1738,6 +1738,387 @@
         </LinearLayout>
 
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Fundus Examination"
+            android:background="#0094cc"
+            android:layout_alignParentTop="true" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OD"
+                    android:id="@+id/textView9c_fundus"
+                    android:layout_alignBaseline="@id/textView9c_fundus"
+                    android:layout_centerHorizontal="true"/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Normal"
+                    android:layout_toRightOf="@id/textView9c_fundus"
+                    android:layout_marginLeft="40dp"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OS"
+                    android:id="@+id/textView11c_fundus"
+                    android:layout_centerHorizontal="true" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Normal"
+                    android:layout_toRightOf="@id/textView11c_fundus"
+                    android:layout_marginLeft="40dp"/>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Media"
+                    android:layout_alignParentTop="true"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox13_b_fundus"
+                    android:layout_alignParentTop="true"
+                    android:checked="false" />
+
+                <Spinner
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinner_fundus"
+                    android:layout_toRightOf="@id/checkBox13_b_fundus" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/spinner_fundus"
+                    android:layout_marginTop="50dp"
+                    android:ems="8"
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox13_c_fundus"
+                    android:layout_alignParentTop="true"
+                    android:checked="false" />
+
+                <Spinner
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinner1_fundus"
+                    android:layout_toRightOf="@id/checkBox13_c_fundus" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/spinner1_fundus"
+                    android:layout_marginTop="50dp"
+                    android:ems="8"
+                    />
+
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="PVD"
+                    android:layout_alignParentTop="true"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBox13_fundus_pvd"
+                android:layout_alignParentTop="true"
+                android:checked="false" />
+
+            <Spinner
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner_fundus_pvd"
+                android:layout_toRightOf="@id/checkBox13_fundus_pvd" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox13b_fundus_pvd"
+                    android:layout_alignParentTop="true"
+                    android:checked="false" />
+
+                <Spinner
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinnerb_fundus_pvd"
+                    android:layout_toRightOf="@id/checkBox13b_fundus_pvd" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Optic Disk"
+                    android:layout_marginRight="20dp"
+                    android:layout_alignParentTop="true"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox13_da"
+                    android:layout_alignParentTop="true"
+                    android:checked="false" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/checkBox13_da"
+                    android:orientation="horizontal"
+                    android:id="@+id/radioButton4_da">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        android:id="@+id/radio_yes3a"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        android:id="@+id/radio_no3a"/>
+
+                </RadioGroup>
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBox13_ab"
+                    android:layout_alignParentTop="true"
+                    android:checked="false" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/checkBox13_ab"
+                    android:orientation="horizontal"
+                    android:id="@+id/radioButton4_d">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"
+                        android:id="@+id/radio_yes3b"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No"
+                        android:id="@+id/radio_no3b"/>
+
+                </RadioGroup>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:paddingBottom="50dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Syringing"
+                    android:layout_marginRight="20dp"
+                    android:layout_alignParentTop="true"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:id="@+id/slit_lamp_examination_section2_et1"
+                    android:ems="8"
+                    android:layout_toRightOf="@+id/slit_lamp_examination_section2_cb1" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/slit_lamp_examination_section2_cb1"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:checked="false" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:ems="8"
+                    android:id="@+id/slit_lamp_examination_section2_et6" />
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/slit_lamp_examination_section2_cb2"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@+id/slit_lamp_examination_section2_et6" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="Save"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/save_btn"
+            android:textAppearance="?android:attr/textAppearanceLarge"/>
     </LinearLayout>
 
 

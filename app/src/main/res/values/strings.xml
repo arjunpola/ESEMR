@@ -21,13 +21,44 @@
     -->
 
     <string-array name="states_list">
-        <item>AP</item>
-        <item>KA</item>
+        <item>Andhra Pradesh</item>
+        <item>Delhi</item>
+        <item>West Bengal</item>
+        <item>Orissa</item>
+        <item>Maharashtra</item>
+        <item>Mizoram</item>
+        <item>Manipur</item>
+        <item>Meghalaya</item>
+        <item>Nagaland</item>
+        <item>Tripura</item>
+        <item>Sikkim</item>
+        <item>Pondicherry</item>
+        <item>Goa</item>
+        <item>Chhattisgarh</item>
+        <item>Kerala</item>
+        <item>Daman &amp; Diu</item>
+        <item>Arunachal Pradesh</item>
+        <item>Bihar</item>
+        <item>Haryana</item>
+        <item>Jammu &amp; Kashmir</item>
+        <item>Karnataka</item>
+        <item>Rajasthan</item>
+        <item>Tamil Nadu</item>
+        <item>Assam</item>
+        <item>Uttarakhand</item>
+        <item>Madhya Pradesh</item>
+        <item>Uttar Pradesh</item>
+        <item>Gujarat</item>
+        <item>Himachal Pradesh</item>
+        <item>Jharkand</item>
+        <item>Punjab</item>
+        <item>Telangana</item>
     </string-array>
-    <string-array name="AP">
+
+    <string-array name="Andhra_Pradesh">
         <item>Hyderabad</item>
     </string-array>
-    <string-array name="KA">
+    <string-array name="Karnataka">
         <item>Bangalore</item>
     </string-array>
 

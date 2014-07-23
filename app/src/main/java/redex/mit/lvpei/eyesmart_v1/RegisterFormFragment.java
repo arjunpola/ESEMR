@@ -110,7 +110,7 @@ public class RegisterFormFragment extends Fragment {
     public void initLists()
     {
         clookup = new HashMap<String, Integer>();
-        clookup.put("AP", R.array.AP);
-        clookup.put("KA",R.array.KA);
+        clookup.put("Andhra_Pradesh", R.array.Andhra_Pradesh);
+        clookup.put("Karnatak",R.array.Karnataka);
     }
 }

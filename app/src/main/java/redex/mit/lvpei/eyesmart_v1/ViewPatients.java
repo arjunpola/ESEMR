@@ -53,7 +53,7 @@ public class ViewPatients extends Activity {
             ((TextView) row.findViewById(R.id.gen)).setText("Male");
             ((TextView) row.findViewById(R.id.dob)).setText("22");
             ((TextView) row.findViewById(R.id.vt)).setText("Rahul");
-            ((TextView) row.findViewById(R.id.ckt)).setText("5:10:10");
+            ((TextView) row.findViewById(R.id.ckt)).setText("5:10 PM");
             tl.addView(row);
 
             row.setOnClickListener(new View.OnClickListener() {

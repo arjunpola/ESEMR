@@ -206,17 +206,6 @@
             android:layout_marginLeft="60dp"
             android:layout_marginRight="60dp"/>
 
-        <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPostalAddress"
-            android:hint="Vision Techinician"
-            android:ems="10"
-            android:id="@+id/vision_tech"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="60dp"
-            android:layout_marginRight="60dp"/>
-
         <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"

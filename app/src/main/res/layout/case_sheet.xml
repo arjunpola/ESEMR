@@ -7,6 +7,11 @@
     android:layout_marginRight="0dp"
     >
 
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,7 +19,7 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         android:id="@+id/editTextre">
 
-        <CheckBox
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Chief Complaints"
@@ -22,8 +27,11 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:background="#0094cc"
             android:checked="false" />
+
         <Spinner
             android:id="@+id/spinner1"
             android:layout_width="match_parent"
@@ -85,7 +93,7 @@
             android:layout_alignParentStart="true"
             android:layout_marginTop="27dp" />
 
-        <CheckBox
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="History of Present Illness"
@@ -95,6 +103,8 @@
             android:layout_below="@+id/editText"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:layout_marginTop="36dp" />
 
         <EditText
@@ -108,7 +118,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
 
-        <CheckBox
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="History of Past Illness"
@@ -118,6 +128,8 @@
             android:layout_alignParentStart="true"
             android:layout_marginTop="20dp"
             android:background="#0094cc"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:checked="false" />
 
         <TextView
@@ -176,7 +188,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
 
-        <CheckBox
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Family History"
@@ -185,6 +197,8 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_marginTop="30dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:background="#0094cc"
             android:checked="false" />
 
@@ -228,9 +242,10 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignRight="@+id/editText2"
-            android:layout_alignEnd="@+id/editText2" />
+            android:layout_alignEnd="@+id/editText2"
+            android:layout_marginTop="20dp"/>
 
-        <CheckBox
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Surgeries/Lasers"
@@ -238,11 +253,13 @@
             android:layout_below="@+id/editText4"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
             android:background="#0094cc"
             android:layout_marginTop="30dp" />
 
         <Spinner
-            android:layout_width="wrap_content"
+            android:layout_width="20dp"
             android:layout_height="wrap_content"
             android:id="@+id/timePicker"
             android:entries="@array/duration"
@@ -338,7 +355,7 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
 
-        <CheckBox
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Allergies"
@@ -348,7 +365,9 @@
             android:layout_below="@+id/editText8"
             android:layout_alignParentLeft="true"
             android:background="#0094cc"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
 
         <EditText
             android:layout_width="wrap_content"
@@ -362,7 +381,7 @@
             android:layout_alignRight="@+id/editText8"
             android:layout_alignEnd="@+id/editText8" />
 
-        <CheckBox
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Current Treatment"
@@ -371,7 +390,9 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:background="#0094cc"
-            android:layout_marginTop="36dp" />
+            android:layout_marginTop="36dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
 
         <EditText
             android:layout_width="wrap_content"
@@ -385,7 +406,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
 
-        <CheckBox
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Personal History"
@@ -394,7 +415,9 @@
             android:layout_below="@+id/editText10"
             android:background="#0094cc"
             android:layout_alignRight="@+id/checkBox5"
-            android:layout_alignEnd="@+id/checkBox5" />
+            android:layout_alignEnd="@+id/checkBox5"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
 
         <EditText
             android:layout_width="wrap_content"
@@ -408,7 +431,7 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true" />
 
-        <CheckBox
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nutritional Status"
@@ -418,7 +441,9 @@
             android:layout_below="@+id/editText11"
             android:background="#0094cc"
             android:layout_alignRight="@+id/checkBox7"
-            android:layout_alignEnd="@+id/checkBox7" />
+            android:layout_alignEnd="@+id/checkBox7"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
 
         <RadioButton
             android:layout_width="wrap_content"
@@ -448,7 +473,7 @@
             android:layout_alignTop="@+id/radioButton"
             android:layout_toRightOf="@+id/spinner2" />
 
-        <CheckBox
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="General Examination"
@@ -458,7 +483,9 @@
             android:layout_below="@+id/radioButton"
             android:layout_alignLeft="@+id/checkBox9"
             android:background="#0094cc"
-            android:layout_alignStart="@+id/checkBox9" />
+            android:layout_alignStart="@+id/checkBox9"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
 
         <EditText
             android:layout_width="wrap_content"
@@ -472,7 +499,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
 
-        <CheckBox
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Systematic Examination"
@@ -482,7 +509,9 @@
             android:layout_alignStart="@+id/editText11"
             android:layout_marginTop="38dp"
             android:background="#0094cc"
-            android:checked="false" />
+            android:checked="false"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
 
         <EditText
             android:layout_width="wrap_content"
@@ -503,11 +532,31 @@
             android:layout_height="wrap_content"
             android:spinnerMode="dropdown"
             android:entries="@array/family_disease"
-            android:layout_above="@+id/editText4"
+            android:layout_below="@+id/textView8"
             android:layout_alignLeft="@+id/textView8"
             android:layout_alignStart="@+id/textView8"
             android:layout_toLeftOf="@+id/textView11" />
 
     </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="Save"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="80dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/save_btn"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+        </LinearLayout>
+
+    </LinearLayout>
 
 </ScrollView>

@@ -48,7 +48,7 @@
         </activity>
         <activity
             android:name=".ViewPatients"
-            android:label="eyeSmart"
+            android:label="Today's Patient List"
             android:screenOrientation="portrait" >
         </activity>
         <activity

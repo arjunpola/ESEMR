@@ -65,8 +65,8 @@ public class Register extends Activity {
     public void initLists()
     {
         clookup = new HashMap<String, Integer>();
-        clookup.put("AP", R.array.AP);
-        clookup.put("KA",R.array.KA);
+        clookup.put("Andhra_Pradesh", R.array.Andhra_Pradesh);
+        clookup.put("Karnataka",R.array.Karnataka);
     }
 
 //    public boolean onCreateOptionsMenu(Menu menu) {
@@ -89,4 +89,10 @@ public class Register extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+   public void registerPatient(View v)
+   {
+       Intent i = new Intent(this,ViewPatients.class);
+       startActivity(i);
+   }
 }
