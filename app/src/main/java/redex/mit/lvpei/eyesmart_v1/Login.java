@@ -68,7 +68,15 @@ public class Login extends Activity {
         if(email.equals("") || pinBox.getText().toString().equals(""))
             Toast.makeText(getBaseContext(), "Missing Values", Toast.LENGTH_SHORT).show();
         else {
-            // Toast.makeText(getBaseContext(), "Email: " + emailBox.getText().toString() + " Pin: " + pinBox.getText().toString(), Toast.LENGTH_SHORT).show();
+
+            //Following code is responsible authenticating the user. Firstly it looks up in the local database for username.
+            //If found then it matches the password and shows next screen based on the result of matching.
+            //If username is not found in local database then it connects to a server(temporarily a personal computer) and authenticates.
+            //Class 'Auth' extends AsyncTask and is used to connect to the server in background and authenticate.
+            //Once authenticated the username and password is saved in the local database and 'Home' Activity is brought to front
+
+            //Uncomment the following code to not bypass the login process.
+
 //            pin = Integer.parseInt(pinBox.getText().toString());
 //            int storedPin=loginDataBaseAdapter.getSingleEntry(email);
 //            Toast.makeText(getBaseContext(),String.valueOf(storedPin),Toast.LENGTH_LONG).show();
@@ -161,7 +169,6 @@ public class Login extends Activity {
         {
             if(result.equals("SUCCESS")) {
                 loginDataBaseAdapter.insertEntry(email,pin);
-                //Toast.makeText(getBaseContext(), "RSUCCESS", Toast.LENGTH_LONG).show();
                 Intent i = new Intent(Login.this,Home.class);
                 startActivity(i);
                 finish();

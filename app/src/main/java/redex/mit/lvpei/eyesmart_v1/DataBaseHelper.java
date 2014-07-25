@@ -19,6 +19,7 @@ public class DataBaseHelper extends SQLiteOpenHelper
     public void onCreate(SQLiteDatabase _db)
     {
         _db.execSQL(LoginDataBaseAdapter.DATABASE_CREATE);
+        //Creates a table to maintain patient records.
         _db.execSQL(LoginDataBaseAdapter.CREATE_PATIENT_TABLES);
     }
     @Override

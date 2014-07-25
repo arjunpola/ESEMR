@@ -45,10 +45,6 @@ public class Register extends Activity {
     AutoCompleteTextView location;
     EditText pinBox;
 
-    private static final String[] COUNTRIES = new String[] {
-            "Belgium", "France", "Italy", "Germany", "Spain"
-    };
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -68,17 +64,27 @@ public class Register extends Activity {
         location = (AutoCompleteTextView)findViewById(R.id.location);
         pinBox = (EditText) findViewById(R.id.pincode);
 
+        //Following is used to load the states from json file. It maintains 2 variables of the states. One is the 'states' -
+        //a string array that is used for dropdown in sorted order and the other is 'stateCode' which is HashMap with String Key and
+        // mapping to an Integer value. The integer represents the state code which is then used to lookup for districts.
+
         try {
               JSONObject  obj = new JSONObject(loadJSONFromAsset("states.json"));
               jstates = obj.getJSONArray("states");
-//
+
                states = new String[jstates.length()];
                for(int i=0;i< jstates.length();i++) {
                 stateCode.put(jstates.getJSONArray(i).getString(2),jstates.getJSONArray(i).getInt(0));
                 states[i] = jstates.getJSONArray(i).getString(2);
                }
                Arrays.sort(states);
+
                Log.v("State",states[0]);
+
+         //Following is used to load districs from json file. It maintains 3 variables of districts. One is 'dists' - a string array
+         //that is used for dropdown in sorted order. 'distCode' is an HashMap that has Integer key which represents the state code and
+         //a List of string that stores districs of corresponding state. 'distMap' is an HashMap with String Key and an Integer value that
+         //is used to get the district code from the name of the district.
 
            obj = new JSONObject(loadJSONFromAsset("dist.json"));
            jdistricts = obj.getJSONArray("dist");
@@ -98,6 +104,10 @@ public class Register extends Activity {
                        d.add(jdistricts.getJSONArray(i).getString(2));
                }
            }
+
+            //The following is used to load mandals from json file. It maintains two variables. 'mandalsMap' is a HashMap with an Integer Key
+            //that represents the distric code and JSONArray value that stores json information of the mandals in that district. 'mandals' is
+            // a string arry that is used as the datasource for Location field which provides AutoComplete feature.
 
             obj = new JSONObject(loadJSONFromAsset("mandals.json"));
             jmandals = obj.getJSONArray("mandals");
@@ -204,6 +214,7 @@ public class Register extends Activity {
 
     }
 
+    //This class is used to read the json file from /src/assets folder.
     public String loadJSONFromAsset(String file) {
         String json = null;
         try {

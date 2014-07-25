@@ -18,6 +18,9 @@ import java.util.ListIterator;
  * Created by arjunpola on 15/07/14.
  */
 
+//Following represent the SQL coloumn names of the Patient table. They are all encapsulated in
+// Patient class.
+
 //class Patient
 //{
 //    static final String First_Name = "FIRSTNAME";
@@ -94,20 +97,12 @@ public class LoginDataBaseAdapter {
         db.close();
     }
 
-    public void getStates()
-    {
-        Cursor cursor = db.query("tbl_states",null,null,null,null,null,null);
-        if(cursor.moveToFirst())
-        {
-            Log.v("State",cursor.getString(cursor.getColumnIndex("tstate_name")));
-        }
-    }
-
     public SQLiteDatabase getDatabaseInstance()
     {
         return db;
     }
 
+    //Used to record login details.
     public void insertEntry(String email,int pin)
     {
         ContentValues newValues = new ContentValues();
@@ -117,6 +112,7 @@ public class LoginDataBaseAdapter {
         db.insert("LOGIN", null, newValues);
     }
 
+    //Clears the login database.
     public void clearLogin()
     {
         db.execSQL("delete from login");
@@ -129,11 +125,7 @@ public class LoginDataBaseAdapter {
         return numberOFEntriesDeleted;
     }
 
-    public int insertPatientData()
-    {
-
-        return -1;
-    }
+    //Following function is currently pending and is used to save the patient data to the local database.
 
     public  long InsertPatientEntry(Patient p)
     {
@@ -151,6 +143,7 @@ public class LoginDataBaseAdapter {
 
     }
 
+    //This class is pending and is used to retrieve all the data in patients table.
     public List<Patient> GetAllPatient()
     {
 
@@ -183,6 +176,8 @@ public class LoginDataBaseAdapter {
         }
 
     }
+
+    //This class is used to query the username to retrieve local pin.
     public int getSingleEntry(String email)
     {
         Cursor cursor=db.query("LOGIN", null, " EMAIL=?", new String[]{email}, null, null, null);
@@ -198,17 +193,6 @@ public class LoginDataBaseAdapter {
         return pin;
     }
 
-//    public String getAllTags(String a) {
-//
-//        Cursor c = db.rawQuery("SELECT * FROM " + "LOGIN" + " where SECURITYHINT = '" +a + "'" , null);
-//        String str = null;
-//        if (c.moveToFirst()) {
-//            do {
-//                str = c.getString(c.getColumnIndex("PASSWORD"));
-//            } while (c.moveToNext());
-//        }
-//        return str;
-//    }
 
     public void updateEntry(String email,int pin)
     {

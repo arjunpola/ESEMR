@@ -27,13 +27,17 @@ public class ViewPatients extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        //Get all the patient data and save it in 'patients' variable.
         adapter = new LoginDataBaseAdapter(getApplicationContext());
         adapter.open();
         patients = adapter.GetAllPatient();
+
+        //Get the inflater to dynamically create list of patients.
         inflater = (LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
         ScrollView sv = (ScrollView) inflater.inflate(R.layout.view_patients,null);
         TableLayout tl = (TableLayout)sv.findViewById(R.id.tableLayout);
 
+        //Populate the patients.
         if(patients != null) {
             for (int i = 0; i < patients.size(); i++) {
 
@@ -46,7 +50,7 @@ public class ViewPatients extends Activity {
                 tl.addView(row);
             }
         }
-        else // Remove Else after Debug.
+        else // Used to display dummy patient information. Remove Else{...} after Debug.
         {
             LinearLayout row = (LinearLayout) inflater.inflate(R.layout.record, null);
             ((TextView) row.findViewById(R.id.name)).setText("Arjun");
