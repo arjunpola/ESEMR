@@ -18,12 +18,12 @@
         android:layout_height="wrap_content"
         android:text="Visual Acuity"
         android:id="@+id/checkBox"
-        android:paddingRight="20dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:background="#0094cc"
+        android:paddingRight="20dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"/>
 

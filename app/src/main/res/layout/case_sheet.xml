@@ -3,93 +3,138 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:layout_marginLeft="20dp"
-    android:background="#CCEAFA"
-    tools:context=".MyActivity">
+    android:background="#CCEAFA">
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Chief Complaints"
+            android:layout_marginTop="20dp"
             android:background="#0094cc"
-            android:textAppearance="?android:attr/textAppearanceMedium"/>
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
 
         <LinearLayout
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="1">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Complaint"
-                    android:layout_marginTop="10dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Eye"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="80dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Duration"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="80dp"/>
-            </LinearLayout>
+
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
-                android:layout_marginTop="10dp">
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-                <Spinner
-                    android:layout_width="120dp"
+
+                   <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginRight="5dp">
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Complaint"
+                                android:gravity="center_horizontal"
+                                android:layout_marginTop="10dp"/>
+
+                            <Spinner
+                                android:layout_width="180dp"
+                                android:layout_height="wrap_content"
+                                android:spinnerMode="dropdown"
+                                android:gravity="center_horizontal"
+                                android:entries="@array/complaint"
+                                android:id="@+id/spinner" />
+                        </LinearLayout>
+
+                   <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                       android:layout_marginRight="5dp">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Eye"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_horizontal"/>
+
+                        <Spinner
+                            android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:spinnerMode="dropdown"
+                            android:id="@+id/spinner2"
+                            android:entries="@array/eye"
+                            android:gravity="center_horizontal"/>
+
+                       </LinearLayout>
+
+                   <LinearLayout
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:spinnerMode="dropdown"
-                    android:entries="@array/complaint"
-                    android:id="@+id/spinner" />
-                <Spinner
-                    android:layout_width="80dp"
-                    android:layout_height="wrap_content"
-                    android:spinnerMode="dropdown"
-                    android:id="@+id/spinner2"
-                    android:entries="@array/eye"
-                    android:layout_marginLeft="20dp"/>
-                <Spinner
-                    android:layout_width="80dp"
-                    android:layout_height="wrap_content"
-                    android:spinnerMode="dropdown"
-                    android:id="@+id/spinner3"
-                    android:entries="@array/duration"
-                    android:layout_marginLeft="20dp"/>
+                    android:orientation="vertical"
+                    android:layout_marginRight="5dp">
+
+                       <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Duration"
+                           android:layout_marginTop="10dp"
+                           android:gravity="center_horizontal"/>
+
+                       <Spinner
+                           android:layout_width="180dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:spinnerMode="dropdown"
+                            android:id="@+id/spinner3"
+                            android:entries="@array/duration"/>
+
+                      </LinearLayout>
+
             </LinearLayout>
+
             <EditText
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textMultiLine"/>
-        </LinearLayout>
+                android:inputType="textMultiLine"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/edit_text"/>
+
+    </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="History of Present Illness"
             android:background="#0094cc"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
             <EditText
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textMultiLine"/>
+                android:inputType="textMultiLine"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/edit_text2"/>
         </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
@@ -97,7 +142,11 @@
             android:background="#0094cc"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="History of Past Illness"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -110,12 +159,16 @@
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
                     android:text="Disease"
+                    android:layout_weight="0.5"
+                    android:gravity="center_horizontal"
                     android:layout_marginTop="10dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
                     android:text="Duration"
+                    android:layout_weight="0.5"
                     android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
                     android:layout_marginLeft="80dp"/>
             </LinearLayout>
             <LinearLayout
@@ -127,6 +180,7 @@
                     android:layout_height="wrap_content"
                     android:spinnerMode="dropdown"
                     android:entries="@array/disease"
+                    android:layout_weight="0.5"
                     android:id="@+id/spinner4"
                     />
                 <Spinner
@@ -135,12 +189,17 @@
                     android:spinnerMode="dropdown"
                     android:id="@+id/spinner5"
                     android:entries="@array/duration"
+                    android:layout_weight="0.5"
                     android:layout_marginLeft="5dp"/>
             </LinearLayout>
             <EditText
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textMultiLine"/>
+                android:inputType="textMultiLine"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/edit_text3"/>
         </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
@@ -148,7 +207,11 @@
             android:text="Family History"
             android:layout_marginTop="10dp"
             android:background="#0094cc"
-            android:textAppearance="?android:textAppearanceMedium"/>
+            android:textAppearance="?android:textAppearanceMedium"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -161,11 +224,15 @@
                     android:layout_width="wrap_content"
                     android:text="Relation"
                     android:layout_marginTop="10dp"
+                    android:layout_weight="0.5"
+                    android:gravity="center_horizontal"
                     android:layout_height="wrap_content" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Disease"
+                    android:layout_weight="0.5"
+                    android:gravity="center_horizontal"
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="80dp"/>
             </LinearLayout>
@@ -175,6 +242,7 @@
                 <Spinner
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
                     android:spinnerMode="dropdown"
                     android:entries="@array/relation"
                     android:id="@+id/spinner6">
@@ -184,6 +252,7 @@
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:spinnerMode="dropdown"
+                    android:layout_weight="0.5"
                     android:id="@+id/spinner7"
                     android:entries="@array/family_disease"
                     android:layout_marginLeft="10dp">
@@ -192,7 +261,11 @@
             <EditText
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textMultiLine"/>
+                android:inputType="textMultiLine"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/edit_text4"/>
         </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
@@ -200,7 +273,11 @@
             android:text="Surgeries/Lasers"
             android:layout_marginTop="10dp"
             android:background="#0094cc"
-            android:textAppearance="?android:textAppearanceMedium"/>
+            android:textAppearance="?android:textAppearanceMedium"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -213,18 +290,24 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Procedure"
+                    android:layout_weight="0.3"
+                    android:gravity="center_horizontal"
                     android:layout_marginTop="10dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Eye"
+                    android:layout_weight="0.3"
                     android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
                     android:layout_marginLeft="80dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Date"
+                    android:layout_weight="0.3"
+                    android:gravity="center_horizontal"
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="80dp"/>
 
@@ -234,34 +317,46 @@
                 android:layout_height="wrap_content">
                 <EditText
                     android:layout_width="120dp"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="0.3"
+                    android:id="@+id/edit_text5"/>
                 <Spinner
                     android:layout_width="80dp"
                     android:layout_height="wrap_content"
                     android:entries="@array/eye"
                     android:id="@+id/spinner8"
+                    android:layout_weight="0.3"
                     android:layout_marginLeft="10dp">
 
                 </Spinner>
                 <EditText
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"/>
+                    android:layout_weight="0.3"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/edit_text6"/>
             </LinearLayout>
 
         </LinearLayout>
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Outcome"/>
+                android:text="Outcome"
+                android:gravity="center_horizontal"/>
             <EditText
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textMultiLine"/>
+                android:inputType="textMultiLine"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/edit_text7"/>
         </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
@@ -269,14 +364,22 @@
             android:text="Allergies"
             android:layout_marginTop="10dp"
             android:background="#0094cc"
-            android:textAppearance="?android:textAppearanceMedium"/>
+            android:textAppearance="?android:textAppearanceMedium"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
             <EditText
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textMultiLine"/>
+                android:inputType="textMultiLine"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/edit_text8"/>
         </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
@@ -284,14 +387,22 @@
             android:text="Current Treatment"
             android:background="#0094cc"
             android:layout_marginTop="10dp"
-            android:textAppearance="?android:textAppearanceMedium"/>
+            android:textAppearance="?android:textAppearanceMedium"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
             <EditText
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textMultiLine"/>
+                android:inputType="textMultiLine"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/edit_text9"/>
         </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
@@ -299,42 +410,64 @@
             android:text="Personal History"
             android:background="#0094cc"
             android:layout_marginTop="10dp"
-            android:textAppearance="?android:textAppearanceMedium"/>
+            android:textAppearance="?android:textAppearanceMedium"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
             <EditText
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textMultiLine"/>
+                android:inputType="textMultiLine"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/edit_text10"/>
         </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:textAppearanceMedium"
             android:background="#0094cc"
-            android:text="Nutritional Status"/>
+            android:text="Nutritional Status"
+            android:layout_marginTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
+
         <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
             <RadioGroup
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:id="@+id/radio_group">
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Malnourished"/>
+                    android:text="Malnourished"
+                    android:layout_weight="0.3"
+                    android:id="@+id/radio_button"/>
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Obese"
-                    android:layout_marginLeft="10dp"/>
+                    android:layout_weight="0.3"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/radio_button2"/>
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Normal"
-                    android:layout_marginLeft="10dp"/>
+                    android:layout_weight="0.3"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/radio_button3"/>
             </RadioGroup>
         </LinearLayout>
         <TextView
@@ -343,29 +476,45 @@
             android:text="General Examination"
             android:layout_marginTop="10dp"
             android:background="#0094cc"
-            android:textAppearance="?android:textAppearanceMedium"/>
+            android:textAppearance="?android:textAppearanceMedium"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
             <EditText
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textMultiLine"/>
+                android:inputType="textMultiLine"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/edit_text11"/>
         </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Systematic Examination"
             android:background="#0094cc"
-            android:layout_marginTop="10dp"
-            android:textAppearance="?android:textAppearanceMedium"/>
+            android:layout_marginTop="20dp"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
+
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
             <EditText
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textMultiLine"/>
+                android:inputType="textMultiLine"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/edit_text12"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="fill_parent"
@@ -382,7 +531,7 @@
                 android:layout_marginLeft="80dp"
                 android:layout_marginRight="80dp"
                 android:layout_gravity="center_horizontal"
-
+                android:id="@+id/save"
                 android:textAppearance="?android:attr/textAppearanceLarge"/>
         </LinearLayout>
 

@@ -26,7 +26,10 @@
             android:id="@+id/textView"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
 
         <CheckBox
             android:layout_width="wrap_content"
@@ -222,7 +225,10 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:background="#0094cc"
-            android:layout_marginTop="44dp" />
+            android:layout_marginTop="44dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -576,7 +582,10 @@
                 android:layout_marginTop="53dp"
                 android:background="#0094cc"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:layout_alignParentStart="true"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"/>
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -700,7 +709,10 @@
             android:text="Post Detailed Examination"
             android:id="@+id/textView12"
             android:background="#0094cc"
-            android:layout_alignParentTop="true" />
+            android:layout_alignParentTop="true"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
 
     <RelativeLayout
         android:layout_width="fill_parent"
@@ -930,7 +942,10 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Schirmers Test"
             android:background="#0094cc"
-            android:layout_alignParentTop="true" />
+            android:layout_alignParentTop="true"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -1348,7 +1363,10 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Lacrimal Patency"
             android:background="#0094cc"
-            android:layout_alignParentTop="true" />
+            android:layout_alignParentTop="true"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
         
         <LinearLayout
             android:layout_width="fill_parent"
@@ -1752,7 +1770,10 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Fundus Examination"
             android:background="#0094cc"
-            android:layout_alignParentTop="true" />
+            android:layout_alignParentTop="true"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
 
         <LinearLayout
             android:layout_width="fill_parent"
