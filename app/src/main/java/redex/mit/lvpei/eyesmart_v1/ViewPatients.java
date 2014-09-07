@@ -39,6 +39,7 @@ public class ViewPatients extends Activity {
 
         //Populate the patients.
         if(patients != null) {
+//            Toast.makeText(this,"Patient Count is "+patients.size(),Toast.LENGTH_SHORT).show();
             for (int i = 0; i < patients.size(); i++) {
 
                 LinearLayout row = (LinearLayout) inflater.inflate(R.layout.record, null);
@@ -48,28 +49,41 @@ public class ViewPatients extends Activity {
                 ((TextView) row.findViewById(R.id.vt)).setText(patients.get(i).getVisionTech());
 
                 tl.addView(row);
+
+                row.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        TextView tv = (TextView) view.findViewById(R.id.name);
+                        //Toast.makeText(getBaseContext(),tv.getText(),Toast.LENGTH_LONG).show();
+                        Intent i = new Intent(getBaseContext(),DetailForms.class);
+                        i.putExtra("NAME",tv.getText());
+                        startActivity(i);
+                    }
+                });
             }
         }
         else // Used to display dummy patient information. Remove Else{...} after Debug.
         {
-            LinearLayout row = (LinearLayout) inflater.inflate(R.layout.record, null);
-            ((TextView) row.findViewById(R.id.name)).setText("Arjun");
-            ((TextView) row.findViewById(R.id.gen)).setText("Male");
-            ((TextView) row.findViewById(R.id.dob)).setText("22");
-            ((TextView) row.findViewById(R.id.vt)).setText("Rahul");
-            ((TextView) row.findViewById(R.id.ckt)).setText("5:10 PM");
-            tl.addView(row);
+//            LinearLayout row = (LinearLayout) inflater.inflate(R.layout.record, null);
+//            ((TextView) row.findViewById(R.id.name)).setText("Arjun");
+//            ((TextView) row.findViewById(R.id.gen)).setText("Male");
+//            ((TextView) row.findViewById(R.id.dob)).setText("22");
+//            ((TextView) row.findViewById(R.id.vt)).setText("Rahul");
+//            ((TextView) row.findViewById(R.id.ckt)).setText("5:10 PM");
+//            tl.addView(row);
+//
+//            row.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    TextView tv = (TextView) view.findViewById(R.id.name);
+//                    //Toast.makeText(getBaseContext(),tv.getText(),Toast.LENGTH_LONG).show();
+//                    Intent i = new Intent(getBaseContext(),DetailForms.class);
+//                    i.putExtra("NAME",tv.getText());
+//                    startActivity(i);
+//                }
+//            });
 
-            row.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    TextView tv = (TextView) view.findViewById(R.id.name);
-                    //Toast.makeText(getBaseContext(),tv.getText(),Toast.LENGTH_LONG).show();
-                    Intent i = new Intent(getBaseContext(),DetailForms.class);
-                    i.putExtra("NAME",tv.getText());
-                    startActivity(i);
-                }
-            });
+            Toast.makeText(this,"No Patients Entered Today!",Toast.LENGTH_LONG).show();
         }
 
         setContentView(sv);

@@ -69,6 +69,8 @@ public class Patient {
         return plocation;
     }
 
+    public String getState(){return pstate;}
+
     public String getPin() {
         return ppin;
     }
@@ -85,8 +87,8 @@ public class Patient {
         return referalAdd;
     }
 
-    public static String getCheckinTime() {
-        return CheckinTime;
+    public String getCheckinTime() {
+        return checkintime;
     }
 
     public  void setCheckinTime(String checkinTime) {
@@ -176,7 +178,5 @@ public class Patient {
     public String getEmail() {
         return email;
     }
-
-
 
 }

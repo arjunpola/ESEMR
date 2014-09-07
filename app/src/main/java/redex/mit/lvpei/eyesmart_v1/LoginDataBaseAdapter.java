@@ -135,10 +135,32 @@ public class LoginDataBaseAdapter {
         newValues.put(Patient.Date_Of_Birth, p.getDob());
         newValues.put(Patient.VisionTechnician, p.getVisionTech());
         newValues.put(Patient.CheckinTime, p.getCheckinTime());
+        newValues.put(Patient.Gender,p.getGender());
+        newValues.put(Patient.Date_Of_Birth,p.getDob());
+        newValues.put(Patient.Email_ID,p.getEmail());
+        newValues.put(Patient.PhoneNumber,p.getPhone());
+        newValues.put(Patient.Country,p.getCountry());
+        newValues.put(Patient.State,p.getState());
+        newValues.put(Patient.District,p.getDist());
+        newValues.put(Patient.PinCode,p.getPin());
+        newValues.put(Patient.Address,p.getAddress());
+        newValues.put(Patient.ReferalName,p.getReferal());
+        newValues.put(Patient.RefAddress,p.getReferalAdd());
 
-
-        Log.v("Stored",p.getfName());
-
+//        Log.v("VisionTech",p.getVisionTech());
+//        Log.v("Checkin",p.getCheckinTime());
+//        Log.v("Stored",p.getGender());
+//        Log.v("DOB",p.getDob());
+//        Log.v("Email",p.getEmail());
+//        Log.v("Phone",p.getPhone());
+//        Log.v("Country",p.getCountry());
+//        Log.v("State",p.getState());
+//        Log.v("Dist",p.getDist());
+//        Log.v("Pin",p.getPin());
+//        Log.v("Add",p.getAddress());
+//        Log.v("Ref",p.getReferal());
+//        Log.v("RefAdd",p.getReferalAdd());
+//        return -1;
         return   db.insert("PATIENT", null, newValues);
 
     }
@@ -164,7 +186,6 @@ public class LoginDataBaseAdapter {
               p.setVisionTech(cursor.getString(cursor.getColumnIndex(Patient.VisionTechnician)));
               p.setGender(cursor.getString(cursor.getColumnIndex(Patient.Gender)));
               Patients.add(p);
-             cursor.moveToNext();
           }while (!cursor.isLast());
             return  Patients;
                     
